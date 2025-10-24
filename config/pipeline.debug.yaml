@@ -1,0 +1,19 @@
+meses_retroativos: 24
+meses_ignorar_recente: 3
+enable_b3_ingestion: false
+enable_mais_retorno_fallback: false
+fundos:
+  - cnpj: '46099591000105'
+    nome: XP Macro Plus Prev Master FI Financeiro Multimercado RL
+    categoria_cvm: Multimercado
+    gestora: XP Asset Management
+    classe_anbima: Multimercados Macro
+    grupo_looker: Multimercados Macro
+  - cnpj: '30068713000158'
+    nome: XP Macro Plus FIC FIM
+    categoria_cvm: Multimercado
+    gestora: XP Asset Management
+    classe_anbima: Multimercados Macro
+    grupo_looker: Multimercados Macro
+categorias_looker:
+  Multimercado: Multimercado

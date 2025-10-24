@@ -1,0 +1,4940 @@
+meses_retroativos: 60
+meses_ignorar_recente: 3
+bigquery_project: YOUR_PROJECT_ID
+bigquery_dataset_staging: staging_fundos
+bigquery_dataset_curated: curated_fundos
+gcs_bucket: your-bucket-name
+enable_b3_ingestion: false
+enable_mais_retorno_fallback: false
+b3_planilhas: []
+fundos:
+- cnpj: 09599346000122
+  nome: 4UM Marlim Dividendos FIA
+  categoria_cvm: Ações
+  gestora: 4UM Investimentos
+  classe_anbima: Ações Dividendos
+  grupo_looker: Ações Dividendos
+- cnpj: '38452175000102'
+  nome: A1 Hedge Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Asset1 Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '57832914000136'
+  nome: A1 High Grade Pós Fixado Feeder 2 FIF CIC RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Asset1 Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '29813769000100'
+  nome: Absolute Alpha Global Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Absolute Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '35617938000130'
+  nome: Absolute Alpha Marb Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Absolute Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '48096589000108'
+  nome: Absolute Atenas Advisory FIC FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Absolute Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '48122126000165'
+  nome: Absolute Creta Advisory FIF FIRF
+  categoria_cvm: Renda Fixa
+  gestora: Absolute Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '18860059000115'
+  nome: Absolute Hedge FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Absolute Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '57027498000101'
+  nome: Absolute Hidra CDI Plus Advisory FIC FI Infra RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: ABSOLUTE DHAMA GESTÃO DE INVESTIMENTOS LTDA
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '51112363000150'
+  nome: Absolute Hidra IPCA FIC de FIF RF Investimento em Infra CP
+  categoria_cvm: Renda Fixa
+  gestora: ABSOLUTE DHAMA GESTÃO DE INVESTIMENTOS LTDA
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '32892827000143'
+  nome: Absolute Pace Long Biased Advisory FIC FIA
+  categoria_cvm: Ações
+  gestora: Absolute Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '28947266000165'
+  nome: Absolute Vertex Advisory FIC FIF Multi
+  categoria_cvm: Multimercado
+  gestora: Absolute Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '34258751000124'
+  nome: Absoluto Partners Advisory FIF em Cotas FIA RL
+  categoria_cvm: Ações
+  gestora: Absoluto Partners Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '43280074000131'
+  nome: Absoluto Partners Global BRL FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Absoluto Partners Investimentos
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '39992830000188'
+  nome: Ace Capital Absoluto FIC FIF FIA RL
+  categoria_cvm: Ações
+  gestora: ACE Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '07124064000143'
+  nome: Ace Capital Absoluto Institucional FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: ACE Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '34774642000160'
+  nome: ACE Capital Advisory FIF CIC Multi RL
+  categoria_cvm: Multimercado
+  gestora: ACE Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '24078037000109'
+  nome: Adam Macro Advisory FIC FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Adam Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '52297687000172'
+  nome: Adam Renda Fixa Ativa Advisory FIC FIF RF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Adam Capital
+  classe_anbima: Renda Fixa Indexados
+  grupo_looker: Renda Fixa Indexados
+- cnpj: '35828705000186'
+  nome: AF Global Bonds CI RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: AF Invest Investimentos
+  classe_anbima: Renda Fixa Investimento no Exterior
+  grupo_looker: Renda Fixa Investimento no Exterior
+- cnpj: '44025131000107'
+  nome: AF Horizonte FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: AF Invest Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '29044189000104'
+  nome: AF Invest Geraes 30 FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: AF Invest Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: 09720734000110
+  nome: AF Invest Geraes FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: AF Invest Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '12987743000186'
+  nome: Alaska Black FIC de FIA - BDR NÍVEL I
+  categoria_cvm: Ações
+  gestora: Alaska Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '26673556000132'
+  nome: Alaska Institucional Long Only FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Alaska Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '33422090000168'
+  nome: Alfa Gemini FIF Investimento em Infraestrutura RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Safra DTVM
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '34839385000105'
+  nome: AlphaKey Ações FIF em Cotas de FIA RL
+  categoria_cvm: Ações
+  gestora: Alpha Key Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '36352721000108'
+  nome: AlphaKey Institucional FIF em Cotas de FIA RL
+  categoria_cvm: Ações
+  gestora: Alpha Key Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '15862830000103'
+  nome: Apex Ações 30 FIC FIF Ações RL
+  categoria_cvm: Ações
+  gestora: Apex Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '40634864000180'
+  nome: Apex Equity Hedge Advisory FIC FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Apex Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '33345956000184'
+  nome: Apex Long Biased Advisory FIC FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Apex Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '44544223000195'
+  nome: Aqua Capital PE Agro FIP Multi - Classe A
+  categoria_cvm: Participações
+  gestora: Aqua Capital
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '21689246000192'
+  nome: Arbor FIC FIA RL
+  categoria_cvm: Ações
+  gestora: Arbor Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '47756349000111'
+  nome: Arbor II FIC FIA RL
+  categoria_cvm: Ações
+  gestora: Arbor Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '34172497000147'
+  nome: ARMOR AXE FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: Armor Gestora de Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '20441301000168'
+  nome: Artesanal CP FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Artesanal Investimentos
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '41888219000156'
+  nome: Arx Denali Advisory FIC de FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: ARX Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '32319627000104'
+  nome: ARX Elbrus Advisory FIC Incentivado FIF em Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: ARX Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '39959156000130'
+  nome: ARX Elbrus Pro Advisory I FIC Incentivado FIF Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: ARX Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '35789436000196'
+  nome: ARX Everest Advisory FIC de FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: ARX Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: 06041290000106
+  nome: ARX Extra FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: ARX Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '58198613000165'
+  nome: ARX FII Portfólio Renda CDI+ RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: ARX Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '52286231000107'
+  nome: ARX Fuji FIC de FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: ARX Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Crédito Livre
+  grupo_looker: Renda Fixa Duração Baixa Crédito Livre
+- cnpj: '32225663000109'
+  nome: ARX Hedge FIC Incentivado Financeiro em Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: ARX Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 03168062000103
+  nome: ARX Income FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: ARX Investimentos
+  classe_anbima: Ações Dividendos
+  grupo_looker: Ações Dividendos
+- cnpj: '57134507000155'
+  nome: Arx Infra Renda CDI FI Incentivado Infraestrutura RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: ARX Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '10237480000162'
+  nome: Arx Long Term FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: ARX Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '17414721000140'
+  nome: ARX Macro FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: ARX Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '41888492000180'
+  nome: Arx Vinson Advisory FIC de FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: ARX Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '20458815000126'
+  nome: ASA Hedge FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: ASA Investments
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '50518609000125'
+  nome: Asa Renda Fixa Ativo CIC CI RF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: ASA Investments
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '35557650000117'
+  nome: Ashmore EM Debt Advisory CIC de Classes Multi IE RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '35602471000154'
+  nome: Ashmore Emerging Markets Equity Advisory CIC de Classes de Ações IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '17627210000107'
+  nome: Atena Tapyr FIF em Cotas FIRF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Atena Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '31340838000158'
+  nome: Atena Yield D30 FIC de FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Atena Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '17249227000178'
+  nome: Athena Total Return FIF em Cotas de FIA RL
+  categoria_cvm: Ações
+  gestora: Athena Capital
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '23186344000132'
+  nome: Athena Total Return II FIF FIA
+  categoria_cvm: Ações
+  gestora: Athena Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '13083227000190'
+  nome: Atlas One FIC FIA
+  categoria_cvm: Ações
+  gestora: Atlas One Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '36182298000145'
+  nome: Atlas One LB FIC FIM
+  categoria_cvm: Ações
+  gestora: Atlas One Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '41544414000169'
+  nome: Atmosphere LS FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Atmosphere Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '36326771000110'
+  nome: ATMR II FIC de FIA
+  categoria_cvm: Ações
+  gestora: Atmos Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '55296764000168'
+  nome: AUGM11 - Augme Crédito Estruturado FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: Augme Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '34218678000167'
+  nome: Augme 180 FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: Augme Capital
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '30568495000110'
+  nome: Augme 30 Advisory FIC FIM CP
+  categoria_cvm: Renda Fixa
+  gestora: Augme Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '52285852000176'
+  nome: Augme 30 II CIC de CIRF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Augme Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '49598896000141'
+  nome: Augme FIC FIRF Incentivado Infraestrutura
+  categoria_cvm: Renda Fixa
+  gestora: Augme Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '40107402000104'
+  nome: Auster Fitness I FIP Multiestratégia
+  categoria_cvm: Participações - Multiestratégia
+  gestora: Leste Investimentos
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '45338646000111'
+  nome: AVBI11 - VBI Crédito
+  categoria_cvm: Investimento Imobiliário
+  gestora: VBI Securities
+  classe_anbima: FII TVM Gestão Ativa
+  grupo_looker: FII TVM Gestão Ativa
+- cnpj: '37331264000138'
+  nome: Aviva Investors Global Credit Integrated Adv CI Multimercado CP IE RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '35002482000101'
+  nome: AXA WF Framlington Digital Economy Advisory CIC CIA IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '35002463000177'
+  nome: AXA WF Framlington Robotech Adv Classe de FIC CIA IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '54886474000101'
+  nome: Axa WF US Dynamic High Yield Bonds Classe FIC Classes FIM CP RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '35142453000137'
+  nome: AXA WF US HIGH YIELD BONDS ADV FIC CI MULT CP IE RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: 07279657000189
+  nome: AZ Quest Ações FIF CIC Ações RL
+  categoria_cvm: Ações
+  gestora: AZ Quest Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '32240069000189'
+  nome: AZ Quest Advisory Total Return FIC FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: AZ Quest Investimentos
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '34370777000160'
+  nome: AZ Quest Altro Advisory FIC de FIF Multimercado CP
+  categoria_cvm: Multimercado
+  gestora: AZ Quest MZK Investimentos
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '36499625000197'
+  nome: AZ Quest Bayes LB Sistemático FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: AZ Quest Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '46929688000190'
+  nome: AZ Quest Bayes LS Sistemático FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Bayes Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '37569846000157'
+  nome: AZ Quest Bayes Sistemático FIF CIA RL
+  categoria_cvm: Ações
+  gestora: AZ Quest Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '25213405000139'
+  nome: AZ Quest Debêntures Incentivadas CP FIC de FIF Incentivado de Investimento
+    em Infra RF
+  categoria_cvm: Renda Fixa
+  gestora: AZ Quest MZK Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '10320188000109'
+  nome: AZ Quest Low Vol FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: AZ Quest Investimentos
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '52280036000170'
+  nome: AZ Quest Luce Advisory II FIC FIF RF CP LP
+  categoria_cvm: Renda Fixa
+  gestora: AZ Quest MZK Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: 04455632000109
+  nome: AZ Quest Multi FIC de FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: AZ Quest MZK Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '26323079000185'
+  nome: AZ Quest Multi Max FIC FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: AZ Quest MZK Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '59482549000102'
+  nome: AZ Quest Renda Mais Infra-Yield VI FIP-IE
+  categoria_cvm: Participações - Infraestrutura
+  gestora: AZ QUEST INFRA LTDA.
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '11392165000172'
+  nome: AZ Quest Small Mid Caps FIC FIA
+  categoria_cvm: Ações
+  gestora: AZ Quest Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '36352498000107'
+  nome: AZ Quest Supra FIC FIF Multimercado CP
+  categoria_cvm: Multimercado
+  gestora: AZ Quest MZK Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '22681798000117'
+  nome: AZ Quest Termo FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: AZ Quest Investimentos
+  classe_anbima: Renda Fixa Duração Média Grau de Investimento
+  grupo_looker: Renda Fixa Duração Média Grau de Investimento
+- cnpj: '13974750000106'
+  nome: AZ Quest Top Long Biased FIC FIF Ações
+  categoria_cvm: Ações
+  gestora: AZ Quest Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '19782311000188'
+  nome: AZ Quest Valore FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: AZ Quest MZK Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '16599968000116'
+  nome: AZ Quest Yield FIC FIRF LP
+  categoria_cvm: Renda Fixa
+  gestora: AZ Quest MZK Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '49998473000119'
+  nome: Azimut Allocation Balanced FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: AZ Quest Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '48038196000130'
+  nome: Azimut Equity Allocation Trend FIF CIC Ações RL
+  categoria_cvm: Ações
+  gestora: AZ Quest Investimentos
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '49998656000134'
+  nome: Azimut Equity Borletti Global Lifestyle FIC FIA IE
+  categoria_cvm: Ações
+  gestora: AZ Quest Investimentos
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '51665327000113'
+  nome: AZPR11 - AZ Quest Panorama Crédito Imob.
+  categoria_cvm: Investimento Imobiliário
+  gestora: Panorama Capital
+  classe_anbima: FII Hibrido Gestão Ativa
+  grupo_looker: FII Hibrido Gestão Ativa
+- cnpj: '49863204000145'
+  nome: AZQA11 - AZ Quest Luna - FIAgro
+  categoria_cvm: Investimento Imobiliário
+  gestora: AZ QUEST AGRO LTDA.
+  classe_anbima: FII TVM Gestão Ativa
+  grupo_looker: FII TVM Gestão Ativa
+- cnpj: '49252656000190'
+  nome: AZQI11 - AZ Quest Infra Yield FIP IE
+  categoria_cvm: Participações - Infraestrutura
+  gestora: AZ QUEST INFRA LTDA.
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '32862354000131'
+  nome: Bahia AM Advisory FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: BAHIA AM RENDA FIXA LTDA
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '23732231000195'
+  nome: Bahia AM Long Biased FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Bahia Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '28747733000103'
+  nome: Bahia AM Maraú Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: BAHIA AM RENDA FIXA LTDA
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '41333093000153'
+  nome: Bahia AM Mutá Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: BAHIA AM RENDA FIXA LTDA
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: 09635172000106
+  nome: Bahia AM Valuation FIF CIC em Ações RL
+  categoria_cvm: Ações
+  gestora: Bahia Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '57376810000164'
+  nome: Basílica Partners UNI FII - RL - Subclasse C
+  categoria_cvm: Investimento Imobiliário
+  gestora: Basílica Partners Latin America Private Equity LTDA
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '39293641000117'
+  nome: BB Asset Ações Nordea Global Climate and Environmnet IS IE FIC FI
+  categoria_cvm: Ações
+  gestora: BB Asset Management
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '44315932000107'
+  nome: BB Asset RF Ativa Plus LP FIC FI
+  categoria_cvm: Renda Fixa
+  gestora: BB Asset Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '45081757000195'
+  nome: BB Asset RF CP LP FIC FI
+  categoria_cvm: Renda Fixa
+  gestora: BB Asset Management
+  classe_anbima: Renda Fixa Duração Média Crédito Livre
+  grupo_looker: Renda Fixa Duração Média Crédito Livre
+- cnpj: '58341429000122'
+  nome: BB Asset RF LP High FIC FIF RL
+  categoria_cvm: Renda Fixa
+  gestora: BB Asset Management
+  classe_anbima: Renda Fixa Duração Média Grau de Investimento
+  grupo_looker: Renda Fixa Duração Média Grau de Investimento
+- cnpj: '10338491000139'
+  nome: BELLUNO FIDC MULTISSETORIAL
+  categoria_cvm: Direito Creditório
+  gestora: Ouro Preto Investimentos
+  classe_anbima: FIDC Fomento Mercantil
+  grupo_looker: FIDC Fomento Mercantil
+- cnpj: '33361831000148'
+  nome: BlackRock Dynamic High Income FIF
+  categoria_cvm: Multimercado
+  gestora: BlackRock Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '33361657000133'
+  nome: BlackRock Global Event Driven Máster FIF
+  categoria_cvm: Multimercado
+  gestora: BlackRock Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '42932895000142'
+  nome: BLC III PARTNERS FIM CRÉDITO  PRIVADO
+  categoria_cvm: Multimercado
+  gestora: Jus Capital
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '55219936000108'
+  nome: Blueoak SS I Feeder FIC FIP - Subclasse A - Multiestratégia RL
+  categoria_cvm: Participações - Multiestratégia
+  gestora: Blueoak Investments Asset
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '12239939000192'
+  nome: BNP Paribas Action FIFA
+  categoria_cvm: Ações
+  gestora: BNP Paribas Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: 05104498000156
+  nome: BNP Paribas Inflação FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: BNP Paribas Asset Management
+  classe_anbima: Renda Fixa Duração Alta Grau de Investimento
+  grupo_looker: Renda Fixa Duração Alta Grau de Investimento
+- cnpj: '38443033000189'
+  nome: BNP Paribas Infra FIF RF Sustentável IS
+  categoria_cvm: Renda Fixa
+  gestora: BNP Paribas Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 09636393000107
+  nome: BNP Paribas Match FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: BNP Paribas Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '50098505000109'
+  nome: BNP Paribas Match Plus 30 Advisory FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: BNP Paribas Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 02539921000152
+  nome: BNP Paribas RF FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: BNP Paribas Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '21185984000100'
+  nome: BNP Paribas Rubi FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: BNP Paribas Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Crédito Livre
+  grupo_looker: Renda Fixa Duração Baixa Crédito Livre
+- cnpj: '11108013000103'
+  nome: BNP Paribas Small Caps FIF em Ações
+  categoria_cvm: Ações
+  gestora: BNP Paribas Asset Management
+  classe_anbima: Ações Small Caps
+  grupo_looker: Ações Small Caps
+- cnpj: '60449267000192'
+  nome: Bocaina Infra DI Renda
+  categoria_cvm: Renda Fixa
+  gestora: Bocaina Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '50109627000153'
+  nome: BOCOM BBM Cash Enhanced FIF CIC RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: BOCOM BBM Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '50094963000170'
+  nome: BOCOM BBM Cash FIF CIC RF CP Ref DI RL
+  categoria_cvm: Renda Fixa
+  gestora: BOCOM BBM Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '49996302000150'
+  nome: Bocom BBM Corporate Credit II FIC FIM
+  categoria_cvm: Renda Fixa
+  gestora: BOCOM BBM Investimentos
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '34799129000123'
+  nome: BOCOM BBM Corporate Credit Plus FIF CIC MULT CP RL
+  categoria_cvm: Multimercado
+  gestora: BOCOM BBM Investimentos
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '59904332000143'
+  nome: BOCOM BBM Infra CDI FIF - CI RF Incentivado Infra RL
+  categoria_cvm: Renda Fixa
+  gestora: BOCOM BBM Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '42870763000133'
+  nome: Bogari Value Advisory FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Bogari Investimentos
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '51293148000100'
+  nome: Bradesco Bancos II FIC FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: Bradesco S.A.
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 04831907000153
+  nome: Bradesco SKY FIC FIRF Referenciada DI RL
+  categoria_cvm: Renda Fixa
+  gestora: Bradesco S.A.
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '34109809000178'
+  nome: Bradesco Zupo FIC FIRF LP CP
+  categoria_cvm: Renda Fixa
+  gestora: Bradesco S.A.
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '34430477000129'
+  nome: Brasil Capital 30 Advisory FIF FIA RL
+  categoria_cvm: Ações
+  gestora: Brasil Capital
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: 09577036000107
+  nome: Brasil Capital FIC FIF Ações RL
+  categoria_cvm: Ações
+  gestora: Brasil Capital
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '41196241000135'
+  nome: Brave 30 High Grade FIC FIM CP
+  categoria_cvm: Direito Creditório
+  gestora: Brave Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '35726300000137'
+  nome: Brave 90 FIC FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Brave Asset Management
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '27943585000130'
+  nome: BRB FIRF IMA-S LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Plural Investimentos
+  classe_anbima: Renda Fixa Indexados
+  grupo_looker: Renda Fixa Indexados
+- cnpj: '06070574000112'
+  nome: Bresser Ações Master FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Bresser Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '59658166000142'
+  nome: BTG Log AAA Cajamar FII RL - Subclasse Sênior
+  categoria_cvm: Investimento Imobiliário
+  gestora: BTG Pactual Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '14799785000119'
+  nome: BTG Pactual Absoluto LS FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: BTG Pactual Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '58460637000140'
+  nome: BTG Pactual Crédito Corporativo Dinâmico Advisory FIF FIC FI
+  categoria_cvm: Renda Fixa
+  gestora: BTG Pactual Asset Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '14171644000157'
+  nome: BTG Pactual Crédito Corporativo I FIF em Cotas de FIRF
+  categoria_cvm: Renda Fixa
+  gestora: BTG Pactual Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 01430938000104
+  nome: BTG Pactual Dólar FI Cambial
+  categoria_cvm: Cambial
+  gestora: BTG Pactual Asset Management
+  classe_anbima: Cambial
+  grupo_looker: Cambial
+- cnpj: '11952873000110'
+  nome: BTG Pactual Explorer FIF RF RL LP - Subclasse A
+  categoria_cvm: Renda Fixa
+  gestora: BTG Pactual Asset Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: 07539298000151
+  nome: BTG Pactual Tesouro IPCA Curto FIRF REF
+  categoria_cvm: Renda Fixa
+  gestora: BTG Pactual Asset Management
+  classe_anbima: Renda Fixa Indexados
+  grupo_looker: Renda Fixa Indexados
+- cnpj: 09344799000108
+  nome: BV Inflation RF FIC FI
+  categoria_cvm: Renda Fixa
+  gestora: Tivio Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '41075440000195'
+  nome: Canvas Enduro Advisory FIC FIF FIM RL
+  categoria_cvm: Multimercado
+  gestora: Canvas Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '26605199000175'
+  nome: Capitânia Infra 90 FIF FIC FI de Infra RF
+  categoria_cvm: Renda Fixa
+  gestora: Capitânia Investimentos
+  classe_anbima: Renda Fixa Duração Alta Crédito Livre
+  grupo_looker: Renda Fixa Duração Alta Crédito Livre
+- cnpj: '61333973000137'
+  nome: Capitânia Infra Advisory Sênior I RF FI-Infra
+  categoria_cvm: Renda Fixa
+  gestora: Capitânia Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '52248139000152'
+  nome: Capitânia Infra Renda 90 Incentivado Infraestrutura RF CP
+  categoria_cvm: Renda Fixa
+  gestora: Capitânia Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '20146294000171'
+  nome: Capitânia Premium 45 FIC de FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Capitânia Investimentos
+  classe_anbima: Renda Fixa Duração Média Crédito Livre
+  grupo_looker: Renda Fixa Duração Média Crédito Livre
+- cnpj: '23272391000107'
+  nome: Capitânia Radar 90 FIC de FIF Multimercado CP LP RL
+  categoria_cvm: Multimercado
+  gestora: Capitânia Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '21732670000172'
+  nome: Capitânia Reit Institucional FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Capitânia Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '13615411000133'
+  nome: Capitânia TOP CP FIC de FIF RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Capitânia Investimentos
+  classe_anbima: Renda Fixa Duração Média Crédito Livre
+  grupo_looker: Renda Fixa Duração Média Crédito Livre
+- cnpj: '50367933000190'
+  nome: Capitania Yield 120 FIC FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Capitânia Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '54497340000107'
+  nome: Capsigma I FIC FI Financeiro Ações
+  categoria_cvm: Ações
+  gestora: Capsigma Investment Partners
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '39960120000176'
+  nome: Claritas Hedge Advisory FIC de FIF Multimercado LP RL
+  categoria_cvm: Multimercado
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '27944406000189'
+  nome: Claritas Long Short Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '39959828000107'
+  nome: Claritas Total Return Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '41955511000144'
+  nome: Clave Alpha Macro Advisory II FIF CIC Multi RL
+  categoria_cvm: Multimercado
+  gestora: Clave Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '35408329000170'
+  nome: Compass Credit Selection FIC de FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Compass Group Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Crédito Livre
+  grupo_looker: Renda Fixa Duração Baixa Crédito Livre
+- cnpj: '47936719000100'
+  nome: Compass High Yield 180 Advisory FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Compass Group Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '36318479000156'
+  nome: Compass Yield 30 FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Compass Group Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '46157305000102'
+  nome: Concept Tech FIP Multiestratégia
+  categoria_cvm: Participações - Multiestratégia
+  gestora: Paraty Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '36352596000136'
+  nome: Constellation Inovação FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Constellation Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '34462109000162'
+  nome: Constellation Institucional Advisory FIC de Ações RL
+  categoria_cvm: Ações
+  gestora: Constellation Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '49844718000153'
+  nome: CPAC11 - Capitânia Agro Crédito
+  categoria_cvm: Investimento Imobiliário
+  gestora: Capitânia Investimentos
+  classe_anbima: FII Hibrido Gestão Ativa
+  grupo_looker: FII Hibrido Gestão Ativa
+- cnpj: '50143549000103'
+  nome: CPHF11 - Capitânia Hedge Fund
+  categoria_cvm: Investimento Imobiliário
+  gestora: Capitânia Investimentos
+  classe_anbima: FII TVM Gestão Ativa
+  grupo_looker: FII TVM Gestão Ativa
+- cnpj: '27945399000130'
+  nome: Crescera Growth Capital FIP
+  categoria_cvm: Participações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '39774487000103'
+  nome: Crescera Growth Capital V FIP Multi - Classe A
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '51601636000120'
+  nome: CYHF11 - Cyrela Hedge Fund
+  categoria_cvm: Investimento Imobiliário
+  gestora: Cy.capital Gestora de Recursos
+  classe_anbima: FII Hibrido Gestão Ativa
+  grupo_looker: FII Hibrido Gestão Ativa
+- cnpj: '33755672000166'
+  nome: Dahlia Ações Advisory FIF em FIC de FIA
+  categoria_cvm: Ações
+  gestora: Dahlia Capital
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '35432385000140'
+  nome: Dahlia Global Allocation FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Dahlia Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '34309551000153'
+  nome: Dahlia Total Return Advisory FIC FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Dahlia Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '14780356000108'
+  nome: Davos Estruturado FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '29250121000173'
+  nome: Daycoval Classic 30 FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: Daycoval Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '53799009000170'
+  nome: Daycoval Classic Advisory FIC FI Financeiro Renda
+  categoria_cvm: Renda Fixa
+  gestora: Daycoval Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '26142614000100'
+  nome: Daycoval Debêntures Incentivadas CP FIM
+  categoria_cvm: Multimercado
+  gestora: Daycoval Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '37627843000122'
+  nome: DNA Brave FIA BDR Nível I
+  categoria_cvm: Ações
+  gestora: XP Advisory
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '35956056000107'
+  nome: DNA Energy FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '37645550000178'
+  nome: DNA Serenity FIC Multimercado CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '35956153000191'
+  nome: DNA Strategy FIC Multimercado CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '52282978000197'
+  nome: Drys Shelter FIC FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Equitas Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Crédito Livre
+  grupo_looker: Renda Fixa Duração Baixa Crédito Livre
+- cnpj: '31392355000105'
+  nome: EB Fibra FIP Multiestratégia
+  categoria_cvm: Participações - Multiestratégia
+  gestora: EB Capital
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '41593656000142'
+  nome: EB Futuro Sustentável FIP Multiestratégia Classe 2
+  categoria_cvm: Participações - Multiestratégia
+  gestora: EB Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '37487547000173'
+  nome: Encore Ações Advisory FIC FIA
+  categoria_cvm: Ações
+  gestora: Encore Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '50493115000133'
+  nome: Encore Fundo Mútuo de Privatização - FGTS Carteira Livre RL
+  categoria_cvm: Privatização
+  gestora: Encore Investimentos
+  classe_anbima: Ações FMP - FGTS
+  grupo_looker: Ações FMP - FGTS
+- cnpj: '37487500000100'
+  nome: Encore LB Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Encore Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '34626199000180'
+  nome: EnterCapital Turing FIC FIM
+  categoria_cvm: Multimercado
+  gestora: EnterCapital Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '36318544000143'
+  nome: Equitas Selection Advisory FIC FIF Ações - Resp Limitada
+  categoria_cvm: Ações
+  gestora: Equitas Investimentos
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '19628666000117'
+  nome: Exploritas America Latina FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Exploritas Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '35755044000106'
+  nome: EXXP11 - XP Exeter Desenvolvimento Logistico
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: FII Desenvolvimento para Venda Gestão Ativa
+  grupo_looker: FII Desenvolvimento para Venda Gestão Ativa
+- cnpj: 00601692000123
+  nome: Fama FIC FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Fama Investimentos
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '60489595000112'
+  nome: First Trust Megatrend FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '21917184000129'
+  nome: Forpus Ações FIC FIA
+  categoria_cvm: Ações
+  gestora: Forpus Capital
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '37887638000104'
+  nome: Forpus Multiestratégia FIF Multimercado LP RL
+  categoria_cvm: Multimercado
+  gestora: Forpus Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '28320600000156'
+  nome: Franklin Clearbridge Ações EUA Growth FIF
+  categoria_cvm: Ações
+  gestora: Franklin Templeton Investimentos
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: 02895694000106
+  nome: Franklin Valor e Liquidez FVL FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Franklin Templeton Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '55577828000107'
+  nome: Fundo 24 Horas FIRF RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '45123558000100'
+  nome: Fundo CRA Cocal Canaã RL - Subclasse A
+  categoria_cvm: Investimento Imobiliário
+  gestora: Genial Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '36327569000103'
+  nome: Gama BW All Weather@12% USD FIC FIM IE RL
+  categoria_cvm: Multimercado
+  gestora: Gama Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '51835937000118'
+  nome: Gama Pearl Diver Global Floating Income BRL FIC FIM IE RL
+  categoria_cvm: Multimercado
+  gestora: Gama Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '10447046000107'
+  nome: Garin Special FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: Garín Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '25307278000137'
+  nome: Gauss Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Gauss Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '31608422000178'
+  nome: Gauss Panorama FIF
+  categoria_cvm: Multimercado
+  gestora: Gauss Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '32240637000141'
+  nome: Gávea Macro Advisory FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Gávea Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '30556738000109'
+  nome: Gávea Macro Plus II FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Gávea Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '39317019000100'
+  nome: Genoa Capital Arpa Advisory FIF
+  categoria_cvm: Ações
+  gestora: Genoa Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '36017731000197'
+  nome: Genoa Capital Radar Advisory FIF
+  categoria_cvm: Multimercado
+  gestora: Genoa Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '48997077000104'
+  nome: Genoa Capital Sagres I CIC CI Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Genoa Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '28075532000107'
+  nome: Geo Empresas Globais em Dolares FIC FIF Ações IE - Resp Limitada
+  categoria_cvm: Ações
+  gestora: GEO Capital
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '32102192000133'
+  nome: Geo Empresas Globais em Reais FIC FIF Ações IE RL
+  categoria_cvm: Ações
+  gestora: GEO Capital
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '36352424000162'
+  nome: Geo Smart Beta de Qualidade em Dólares FIC FIA IE RL
+  categoria_cvm: Ações
+  gestora: GEO Capital
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '58943835000165'
+  nome: Giant Cash FIRF LP
+  categoria_cvm: Renda Fixa
+  gestora: DAO Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '40920066000114'
+  nome: Giant DAO Multifactor LB FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: DAO Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '41075713000100'
+  nome: Giant Darius Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: ZEITGEIST TECH INVESTIMENTOS LTDA
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '34186116000189'
+  nome: Giant Sigma Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Giant Steps Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '35940266000107'
+  nome: Giant Zarathustra Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: ZEITGEIST TECH INVESTIMENTOS LTDA
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: 09143435000160
+  nome: GTI Dimona Brasil FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: GTI Investimentos
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '35717650000137'
+  nome: GTI Nimrod FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: GTI Investimentos
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: 08830947000131
+  nome: Guepardo Institucional FIF em Cotas FIA RL
+  categoria_cvm: Ações
+  gestora: Guepardo Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '33736845000107'
+  nome: Hashdex 100 Nasdaq Crypto Index FIM RL - Subclasse Hashdex 100
+  categoria_cvm: Multimercado
+  gestora: Hashdex Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '33736873000116'
+  nome: Hashdex 20 Nasdaq Crypto Index FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Hashdex Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '35088108000162'
+  nome: Hashdex 40 Nasdaq Crypto Index FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Hashdex Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '36986672000165'
+  nome: Hashdex Bitcoin FIM RL
+  categoria_cvm: Multimercado
+  gestora: Hashdex Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '40212940000169'
+  nome: Hashdex Crypto Top Perfomers FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Hashdex Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '44417355000156'
+  nome: Hashdex Defi FIM
+  categoria_cvm: Multimercado
+  gestora: Hashdex Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '44417431000123'
+  nome: Hashdex Ethereum FIM
+  categoria_cvm: Multimercado
+  gestora: Hashdex Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '44466443000148'
+  nome: Headline XP Venture Capital 3 FIP Multi - Classe A
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Asset Management
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '60958603000122'
+  nome: HIRS11 - HIRE RESIDENCIAL II FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: '-'
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '32890800000111'
+  nome: HIX Capital Advisory FIC FIA
+  categoria_cvm: Ações
+  gestora: Hix Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '22662135000155'
+  nome: HIX Capital Institucional FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Hix Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '37310657000165'
+  nome: Ibiuna Credit FIF CIC Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: Ibiuna Investimentos
+  classe_anbima: Multimercados Juros e Moedas
+  grupo_looker: Multimercados Juros e Moedas
+- cnpj: '13401715000106'
+  nome: Ibiuna Equities FIC FIA
+  categoria_cvm: Ações
+  gestora: Ibiuna Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '12154412000165'
+  nome: Ibiuna Hedge FIF FIM RL
+  categoria_cvm: Multimercado
+  gestora: Ibiuna Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '30493349000173'
+  nome: Ibiuna Hedge ST Advisory FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Ibiuna Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '17554200000199'
+  nome: Ibiuna Long Biased FIF CIC Multi RL
+  categoria_cvm: Multimercado
+  gestora: Ibiuna Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '29732926000153'
+  nome: Ibiuna Long Short Advisory FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Ibiuna Investimentos
+  classe_anbima: Multimercados Long and Short Neutro
+  grupo_looker: Multimercados Long and Short Neutro
+- cnpj: '57829025000110'
+  nome: Ibiuna RF Ativo Inst RF RL - Subclasse de Investimento
+  categoria_cvm: Renda Fixa
+  gestora: Ibiuna Investimentos
+  classe_anbima: Renda Fixa Duração Livre Soberano
+  grupo_looker: Renda Fixa Duração Livre Soberano
+- cnpj: '58327943000103'
+  nome: Icatu Vanguarda Dinâmico CDI FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Icatu Vanguarda Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: 08279304000141
+  nome: Icatu Vanguarda Dividendos FIA
+  categoria_cvm: Ações
+  gestora: Icatu Vanguarda Investimentos
+  classe_anbima: Ações Dividendos
+  grupo_looker: Ações Dividendos
+- cnpj: '12682783000110'
+  nome: Icatu Vanguarda FIC FI Inflação Curta RF LP
+  categoria_cvm: Renda Fixa
+  gestora: Icatu Vanguarda Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '07400556000114'
+  nome: Icatu Vanguarda FIC FI Inflação Longa RF LP
+  categoria_cvm: Renda Fixa
+  gestora: Icatu Vanguarda Investimentos
+  classe_anbima: Renda Fixa Duração Média Crédito Livre
+  grupo_looker: Renda Fixa Duração Média Crédito Livre
+- cnpj: '34793170000192'
+  nome: Icatu Vanguarda FIF Incentivado em Infraestrutura RF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Icatu Vanguarda Investimentos
+  classe_anbima: Renda Fixa Duração Alta Crédito Livre
+  grupo_looker: Renda Fixa Duração Alta Crédito Livre
+- cnpj: '35637151000130'
+  nome: Icatu Vanguarda Igaraté Long Biased FIF Mult - Resp Limitada
+  categoria_cvm: Multimercado
+  gestora: Icatu Vanguarda Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '44917374000141'
+  nome: Icatu Vanguarda Liquidez FIF CI RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Icatu Vanguarda Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '19418031000195'
+  nome: Icatu Vanguarda Pré-Fixado FIRF LP
+  categoria_cvm: Renda Fixa
+  gestora: Icatu Vanguarda Investimentos
+  classe_anbima: Renda Fixa Duração Alta Grau de Investimento
+  grupo_looker: Renda Fixa Duração Alta Grau de Investimento
+- cnpj: '37262531000162'
+  nome: IDZA11 - XP IdeaZarvos
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: FII Desenvolvimento para Venda Gestão Ativa
+  grupo_looker: FII Desenvolvimento para Venda Gestão Ativa
+- cnpj: '46437903000135'
+  nome: IMOV11 - Navi Hedge Fund
+  categoria_cvm: Investimento Imobiliário
+  gestora: Navi Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '57139003000128'
+  nome: IMPACTO ROXO FIDC DE PRECATORIOS
+  categoria_cvm: Direito Creditório
+  gestora: XP Advisory
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '17335646000122'
+  nome: Indie FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Indie Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '15174629000125'
+  nome: Integral FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: Integral Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '20879578000177'
+  nome: Inter Conservador FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Inter Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '27826059000190'
+  nome: Inter Premium FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Inter Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '61560810000197'
+  nome: INVISTE FIRF INFRA
+  categoria_cvm: Renda Fixa
+  gestora: XP Advisory
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '35939779000190'
+  nome: IP Atlas BRL FIC FIA RL
+  categoria_cvm: Ações
+  gestora: IP Capital Partners
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '35939847000110'
+  nome: IP Atlas USD FIC FIF FIF Ações RL
+  categoria_cvm: Ações
+  gestora: IP Capital Partners
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '12082452000149'
+  nome: IP Participações IPG FIC FIF Ações RL
+  categoria_cvm: Ações
+  gestora: IP Capital Partners
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '40796008000120'
+  nome: IP Value Hedge Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: IP Capital Partners
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '26978438000132'
+  nome: Iridium Apollo FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Iridium Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '28259415000101'
+  nome: Iridium Pioneer Debêntures Incentivadas FI Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Iridium Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '32756812000158'
+  nome: Iridium Titan Advisory FIC em FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Iridium Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '19212817000151'
+  nome: Itaú Alvorada FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Itaú Unibanco Asset
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '45512169000169'
+  nome: Itaú Debêntures Incentivadas FC Incentivado Investimento Inf
+  categoria_cvm: Renda Fixa
+  gestora: Itaú Unibanco Asset
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '41055241000115'
+  nome: Itaú Hedge Plus Advisory Multimercado FIF CIC RL
+  categoria_cvm: Multimercado
+  gestora: Itaú Unibanco Asset
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '52285727000166'
+  nome: Itaú Janeiro Distribuidores FIF CIC Mult - Resp Limitada
+  categoria_cvm: Multimercado
+  gestora: Itaú Unibanco Asset
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '52342951000142'
+  nome: Itaú Janeiro Distribuidores FIF CIC RF LP - Resp Limitada
+  categoria_cvm: Renda Fixa
+  gestora: Itaú Unibanco Asset
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '32892819000105'
+  nome: Itaú Optimus Distribuidores FIF CIC RF LP - Resp Limitada
+  categoria_cvm: Renda Fixa
+  gestora: Itaú Unibanco Asset
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '35727276000150'
+  nome: Itaú Optimus Titan Distribuidores FIF CIC Mult - Resp Limitada
+  categoria_cvm: Multimercado
+  gestora: Itaú Unibanco Asset
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '55347224000166'
+  nome: Itaú Sinfonia All Distribuidores FIF CIC Mult CP Resp Limita
+  categoria_cvm: Multimercado
+  gestora: Itaú Unibanco Asset
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '58356902000145'
+  nome: JGFA11 - JGP Ecossistema Infra CDI CP RL
+  categoria_cvm: Renda Fixa
+  gestora: JGP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '23956069000199'
+  nome: JGP Corporate FIC de FIF RF CP LP FEEDER II RL
+  categoria_cvm: Renda Fixa
+  gestora: JGP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '28767162000179'
+  nome: JGP Crédito Advisory FIF Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: JGP Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '45683300000150'
+  nome: JGP Crédito Ecosssistema 360 Advisory FIC de FIF Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: JGP Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '54237051000160'
+  nome: JGP Debêntures Incentivadas Juros Reais 60 FI Infra CP RL
+  categoria_cvm: Renda Fixa
+  gestora: JGP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '41594333000173'
+  nome: JGP Debêntures Incentivadas Juros Reais FIF Incentivado em Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: JGP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 09143318000104
+  nome: JGP Equity FIC FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: JGP Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '36352690000195'
+  nome: JGP ESG Insitucional Advisory FIC de FIF em Ações IS RL
+  categoria_cvm: Ações
+  gestora: JGP Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '11228311000129'
+  nome: JGP Long Only FIC FIF Ações RL
+  categoria_cvm: Ações
+  gestora: JGP Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '28648924000118'
+  nome: JGP MAX Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: JGP Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '30190210000150'
+  nome: JGP Strategy Advisory FIC FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: JGP Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '52915104000120'
+  nome: JGPI11 - JGP Infra
+  categoria_cvm: Renda Fixa
+  gestora: JGP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '43741205000130'
+  nome: JGPT11 - JGP Crédito Agro
+  categoria_cvm: Investimento Imobiliário
+  gestora: JGP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '58893662000118'
+  nome: Jive BossaNova 90 FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Mauá Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '43121036000136'
+  nome: Jive BossaNova High Yield Advisory FIC FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Mauá Capital
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '44951924000149'
+  nome: Jive Dist & Spec Sits IV Adv Qual FicFim CP - Modelo A
+  categoria_cvm: Multimercado
+  gestora: Jive Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '48658548000150'
+  nome: Jive Dist & Spec Sits IV Adv Qual II FicFim CP - Modelo A
+  categoria_cvm: Multimercado
+  gestora: Jive Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '52204330000100'
+  nome: Jive Dist & Spec Sits IV Adv Qual III FicFim CP - Modelo A
+  categoria_cvm: Multimercado
+  gestora: Jive Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '44951896000160'
+  nome: Jive Dist Spec Sits IV ADV Profissional 1ª emissão
+  categoria_cvm: Multimercado
+  gestora: Jive Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '60261869000111'
+  nome: JiveMauá Bossanova Crédito Securitizado (Varejo) FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Mauá Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '60103810000103'
+  nome: JiveMauá BossaNova Crédito Securitizado FIDC - Cota Sênior
+  categoria_cvm: Direito Creditório
+  gestora: Mauá Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '60275931000124'
+  nome: JOATINGA CLUBE DE INVESTIMENTO
+  categoria_cvm: '-'
+  gestora: Gestao Clubes de Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: 08545330000174
+  nome: Joule Value FIF em Cotas FIA
+  categoria_cvm: Ações
+  gestora: Joule Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '34580935000106'
+  nome: Journey Capital Endurance Debêntures Incentivadas Juros Reais Advisory FIF
+    em Cotas de FI Infra RL
+  categoria_cvm: Renda Fixa
+  gestora: Journey Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '31120420000135'
+  nome: Journey Capital Endurance Incentivado FIF em Infra RF
+  categoria_cvm: Renda Fixa
+  gestora: Journey Capital
+  classe_anbima: Renda Fixa Duração Alta Crédito Livre
+  grupo_looker: Renda Fixa Duração Alta Crédito Livre
+- cnpj: '33150386000177'
+  nome: Journey Capital Endurance Plus Advisory FIF em Cotas de Fundos Incentivados
+    em Infra RF
+  categoria_cvm: Renda Fixa
+  gestora: Journey Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '38428156000140'
+  nome: JPM China Equity Advisory CIA IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '38421502000169'
+  nome: JPM China Equity Dólar Advisory CIA IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '24454718000116'
+  nome: JPMorgan Dolar Global Macro Opportunities FIF Multimercado IE RL
+  categoria_cvm: Multimercado
+  gestora: JP Morgan Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '29587389000103'
+  nome: JPMorgan Global Bond FIC de FIF Multimercado IE Classe A RL
+  categoria_cvm: Multimercado
+  gestora: JP Morgan Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '26112046000196'
+  nome: JPMorgan Global Income FIC de FIF Multimercado IE Classe A RL
+  categoria_cvm: Multimercado
+  gestora: JP Morgan Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '19821469000110'
+  nome: JPMorgan Global Macro Opportunities FIC de FIF Multimercado IE Classe A RL
+  categoria_cvm: Multimercado
+  gestora: JP Morgan Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '43778868000120'
+  nome: Kad IMAB FIC FIF RF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Kadima Asset Management
+  classe_anbima: Renda Fixa Duração Alta Soberano
+  grupo_looker: Renda Fixa Duração Alta Soberano
+- cnpj: '12845796000162'
+  nome: Kadima Equities FIF em Ações
+  categoria_cvm: Ações
+  gestora: Kadima Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '14146496000110'
+  nome: Kadima High Vol FIC FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Kadima Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: 09441308000147
+  nome: Kadima II FIC FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Kadima Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '33378392000186'
+  nome: Kadima Long Bias FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Kadima Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '31455960000170'
+  nome: Kadima Long Short Plus FIC FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Kadima Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '31923761000149'
+  nome: Kadima LT FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Kadima Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '28849694000155'
+  nome: Kapitalo Alpha Global Advisory FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Kapitalo Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '33520968000106'
+  nome: Kapitalo K10 Advisory FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Kapitalo Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '26978199000110'
+  nome: Kapitalo Kappa Advisory FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Kapitalo Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '26396708000105'
+  nome: Kapitalo NW3 Plus FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Kapitalo Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '39573883000164'
+  nome: Kapitalo Tarkus Advisory FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Kapitalo Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '30521581000178'
+  nome: Kapitalo Zeta Advisory FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Kapitalo Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '42831231000197'
+  nome: Kapitalo Zeta Merídia FIC de FIM
+  categoria_cvm: Multimercado
+  gestora: Kapitalo Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '41993797000152'
+  nome: Kinea Andes FIF CIC RF CP LP RL - Subclasse I
+  categoria_cvm: Renda Fixa
+  gestora: Kinea Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '34687633000131'
+  nome: Kinea Apolo FIF MM RL - Subclasse I
+  categoria_cvm: Multimercado
+  gestora: Kinea Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '29762315000158'
+  nome: Kinea Atlas II FIM RL - Subclasse I
+  categoria_cvm: Multimercado
+  gestora: Kinea Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '21624757000126'
+  nome: Kinea Chronos FIM RL - Subclasse I
+  categoria_cvm: Multimercado
+  gestora: Kinea Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '47212331000159'
+  nome: Kinea Dakar FIF CIC RF LP RL - Subclasse I
+  categoria_cvm: Renda Fixa
+  gestora: Kinea Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '35372771000194'
+  nome: Kinea Gama FIF CIC em Ações RL - Subclasse I
+  categoria_cvm: Ações
+  gestora: Kinea Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '53075427000115'
+  nome: Kinea Incentivado RF CP LP FIF RL FI Deb Infra RL - Subclasse I
+  categoria_cvm: Renda Fixa
+  gestora: Kinea Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '39586858000115'
+  nome: Kinea IPCA Dinâmico II FIF RF RL - Subclasse II
+  categoria_cvm: Renda Fixa
+  gestora: Kinea Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '32990051000102'
+  nome: Kinea Oportunidade FIF RF CP RL - Subclasse I
+  categoria_cvm: Renda Fixa
+  gestora: Kinea Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '41219331000102'
+  nome: Kinea PE V Feeder Advisory FIP Multi RL - Classe A
+  categoria_cvm: Participações
+  gestora: Kinea Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '27945264000174'
+  nome: Kinea RF Absoluto FIF RF LP RL - Subclasse I
+  categoria_cvm: Renda Fixa
+  gestora: Kinea Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '42731202000153'
+  nome: Kínitro 30 FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Kínitro Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '27749572000124'
+  nome: Kínitro FIF Ações
+  categoria_cvm: Ações
+  gestora: Kínitro Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '25213366000170'
+  nome: Kiron FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Kiron Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '29054793000103'
+  nome: Kiron Institucional FIA RL
+  categoria_cvm: Ações
+  gestora: Kiron Capital
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '40265671000107'
+  nome: KJNT11 - Kijani Asatala FIAgro
+  categoria_cvm: Investimento Imobiliário
+  gestora: Kijani Investimentos
+  classe_anbima: FII TVM Gestão Ativa
+  grupo_looker: FII TVM Gestão Ativa
+- cnpj: '59196234000107'
+  nome: LCP Renda Imobiliária Feeder FII
+  categoria_cvm: Investimento Imobiliário
+  gestora: LCP Gestora de Recursos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '59158574000135'
+  nome: LCP Renda Imobiliária Master FII
+  categoria_cvm: Investimento Imobiliário
+  gestora: LCP Gestora de Recursos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '10320151000180'
+  nome: Leblon Ações FIC de FIF
+  categoria_cvm: Ações
+  gestora: Leblon Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '26768800000140'
+  nome: Leblon Ações II Institucional FIC FIA
+  categoria_cvm: Ações
+  gestora: Leblon Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '42287819000121'
+  nome: Legacy Absoluto Advisory FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Legacy Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '30566221000192'
+  nome: Legacy Capital Advisory FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: Legacy Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '54699979000167'
+  nome: Legacy Capital Compound Advisory Debêntures Infra FIRF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Legacy Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '50891130000130'
+  nome: Legacy Capital Compound FIF DEB Infra CDI Ativo RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Legacy Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '39487617000119'
+  nome: Legacy Capital Credit Advisory FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: Legacy Capital
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '59063042000114'
+  nome: Legacy Capital Credit D15 FIF MM CP RL
+  categoria_cvm: Multimercado
+  gestora: Legacy Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '60762973000190'
+  nome: Legacy Capital Credit Horizon Senior Incentivado FIF CIC RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Legacy Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '57021822000176'
+  nome: Legacy Capital Portfolio Renda Mais FI-INFRA RF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Legacy Capital
+  classe_anbima: Renda Fixa Duração Baixa Crédito Livre
+  grupo_looker: Renda Fixa Duração Baixa Crédito Livre
+- cnpj: '54087357000188'
+  nome: Legacy Capital V10 FI Financeiro CIC Mult Resp Limitada
+  categoria_cvm: Multimercado
+  gestora: Legacy Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '54022134000132'
+  nome: Legato Liquidez Classe Investimento RF Referenciada DI RL
+  categoria_cvm: Renda Fixa
+  gestora: Paramis Investimentos
+  classe_anbima: Renda Fixa Indexados
+  grupo_looker: Renda Fixa Indexados
+- cnpj: '24325422000103'
+  nome: Lis Value FIA RL
+  categoria_cvm: Ações
+  gestora: LIS Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '11182072000113'
+  nome: Logos Total Return FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Logos Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '40753313000135'
+  nome: Lyxor BridgeWater Core Global Macro Advisory FIF IE
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '40753759000160'
+  nome: Lyxor BridgeWater Core Global Macro Dólar Advisory FIF IE
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '39466946000183'
+  nome: M Emerging Leaders Advisory CIA IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '50716952000184'
+  nome: M8 Credit Advanced FIC FIDC
+  categoria_cvm: Direito Creditório
+  gestora: M8 Partners Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '26841302000186'
+  nome: M8 Credit Opportunities FIC de FI em FIDC
+  categoria_cvm: Direito Creditório
+  gestora: M8 Partners Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '47046855000117'
+  nome: MAG Cash 10 FIRF
+  categoria_cvm: Renda Fixa
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '17899612000160'
+  nome: Mag Cash FIRF LP
+  categoria_cvm: Renda Fixa
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '48899234000149'
+  nome: MAG FIRF Ativo LP
+  categoria_cvm: Renda Fixa
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '44211851000159'
+  nome: MAG FIRF Referenciado DI Premium CP
+  categoria_cvm: Renda Fixa
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '42084992000122'
+  nome: MAG Global Bonds FIC FIM IE
+  categoria_cvm: Multimercado
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '44602950000161'
+  nome: Mag Global Equity BRL Classe de Investimento em Cotas de FIM RL
+  categoria_cvm: Multimercado
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '38001966000116'
+  nome: Mag Global Equity FIC FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '50697486000137'
+  nome: Mag High Grade Plus 30 FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '14115118000170'
+  nome: Mag Inflação Referenciado IMA-B FIRF FIF CIRF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Renda Fixa Duração Alta Grau de Investimento
+  grupo_looker: Renda Fixa Duração Alta Grau de Investimento
+- cnpj: '11435287000107'
+  nome: Mag Renda Fixa FIF CI RL
+  categoria_cvm: Renda Fixa
+  gestora: Mongeral Aegon Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '59604698000105'
+  nome: Manatí Renda CDI FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: Manatí Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '14083797000142'
+  nome: Mantaro Ações FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Mantaro Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '45653398000101'
+  nome: Mantaro Equity Hedge FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: Mantaro Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '17002861000101'
+  nome: Mantaro LB FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Mantaro Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '51253495000100'
+  nome: Mapfre Confianza FIF RF Referenciado DI CP RL
+  categoria_cvm: Renda Fixa
+  gestora: MAPFRE Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: 08610270000126
+  nome: Mapfre FIF RF RL
+  categoria_cvm: Renda Fixa
+  gestora: MAPFRE Investimentos
+  classe_anbima: Renda Fixa Duração Média Grau de Investimento
+  grupo_looker: Renda Fixa Duração Média Grau de Investimento
+- cnpj: '32397723000162'
+  nome: Mar Absoluto FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Mar Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '49916958000116'
+  nome: MARE11 - Manatí Recebíveis Estruturados
+  categoria_cvm: Investimento Imobiliário
+  gestora: Manatí Capital
+  classe_anbima: FII TVM Gestão Ativa
+  grupo_looker: FII TVM Gestão Ativa
+- cnpj: '57979459000104'
+  nome: Mauá Capital Logística Feeder FII - RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: Mauá Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '43741195000133'
+  nome: MCCE11 - Mauá Capital Crédito Estruturado
+  categoria_cvm: Investimento Imobiliário
+  gestora: Mauá Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '54698848000165'
+  nome: MCFA11 - Mauá Capital High Grade FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: Mauá Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '46300572000197'
+  nome: MERAKI BRABUS FIF FIA
+  categoria_cvm: Ações
+  gestora: Meraki Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '38049108000141'
+  nome: Meraki Equity Hedge FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Meraki Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '38049303000171'
+  nome: Meraki LB FIC em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Meraki Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '43210552000137'
+  nome: Mirova Global Sustainable Equity Advisory IS IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '35354967000156'
+  nome: Moat Capital Advisory FIC FIA
+  categoria_cvm: Ações
+  gestora: Moat Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '41326095000115'
+  nome: Moat Capital Equity Hedge Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Moat Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '24140256000162'
+  nome: Moat Capital Equity Hedge FIF CIC Multimercado RL CI RF - Subclasse I
+  categoria_cvm: Multimercado
+  gestora: Moat Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '31392336000170'
+  nome: Moat Capital Total Return Advisory FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Moat Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '19186860000190'
+  nome: Módulo I FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Módulo Capital
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '39774403000123'
+  nome: Monashees Expansion Venture Capital Advisory FIM CP IE
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: 08869576000100
+  nome: MOS FIF CIA RL
+  categoria_cvm: Ações
+  gestora: MOS Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '58643797000125'
+  nome: MRFA11 - XP Multi Renda FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '57976053000160'
+  nome: MS Emerging Markets Debt Opportunities CI Mult CP IE RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '42280143000144'
+  nome: MS Global BDR Advisory Dólar FIC FIA BDR Nível I
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '37489109000144'
+  nome: MS GLOBAL BRANDS ADVISORY FIC FIA IE
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '37331214000150'
+  nome: MS GLOBAL BRANDS DÓLAR ADVISORY FIC FIA IE
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '32756019000159'
+  nome: MS Global Fixed Income Advisory FIC FIM IE
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '33913562000185'
+  nome: MS GLOBAL OPPORTUNITIES DÓLAR ADVISORY FIC FIA IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '40755318000105'
+  nome: MS GLOBAL OPPORTUNITY ADVISORY FIC FIA IE
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '32386581000138'
+  nome: MS RISCO DINÂMICO ADVISORY FIC FIM IE
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '38542735000110'
+  nome: MS US ADVANTAGE ADVISORY CI AÇÕES IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '34793078000122'
+  nome: Navi Cruise Advisory FIC FIA
+  categoria_cvm: Ações
+  gestora: Navi Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '34633411000136'
+  nome: Navi Feeder FIF em Cotas de FIF em Ações
+  categoria_cvm: Ações
+  gestora: Navi Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '14113340000133'
+  nome: Navi Institucional FIC FIA
+  categoria_cvm: Ações
+  gestora: Navi Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '26680221000141'
+  nome: Navi Long Biased Master FIA
+  categoria_cvm: Multimercado
+  gestora: Navi Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '12430199000177'
+  nome: Navi LS FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Navi Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '53251006000106'
+  nome: Navi Residencial Prime Opportunities - Classe A - FII Resp L
+  categoria_cvm: Investimento Imobiliário
+  gestora: Navi Real Estate Ventures
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: 08771538000101
+  nome: Neo Multi Estratégia 30 Feeder FIC FIM
+  categoria_cvm: Multimercado
+  gestora: NEO Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '26218614000138'
+  nome: Neo Navitas B FIC FIA
+  categoria_cvm: Ações
+  gestora: NEO Investimentos
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '26324209000102'
+  nome: Neo Provectus I FIC FIM
+  categoria_cvm: Multimercado
+  gestora: NEO Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '28911598000190'
+  nome: Nest Absolute Long Bias FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Nest Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '20485402000130'
+  nome: Neuberger Berman US MultiCap Opportunities Dolar Advisory FIC FIA IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '46153220000156'
+  nome: Newave Energia FIP - Classe D (com DI)
+  categoria_cvm: Participações - Multiestratégia
+  gestora: Newave Investimentos
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '56958829000156'
+  nome: NFIP11 - Navi Infra FIP-IE (RL)
+  categoria_cvm: Participações - Infraestrutura
+  gestora: NAVI YIELD - ADMINISTRADORA E GESTORA DE RECURSOS FINANCEIROS LTDA
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '39818102000154'
+  nome: Nordea Alfa 10 Advisory FIC FIM IE
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '39602877000198'
+  nome: Nordea Alfa 10 Dolar Advisory FIC FIM IE
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '37467515000106'
+  nome: Norte LB CIC de CIM RL
+  categoria_cvm: Multimercado
+  gestora: Norte Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '45443993000104'
+  nome: Novus Crédito FIM CP LP
+  categoria_cvm: Multimercado
+  gestora: Novus Crédito Gestão de Recursos Ltda.
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: 06301947000119
+  nome: Novus Institucional FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Novus Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '14806166000104'
+  nome: Novus Macro D5 FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Novus Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '14146726000141'
+  nome: Novus Macro FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Novus Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '51102761000195'
+  nome: Novus Plus FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Novus Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '31932715000106'
+  nome: Novus Renda Fixa Exclusive FIC FI LP
+  categoria_cvm: Renda Fixa
+  gestora: Novus Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '54484843000130'
+  nome: Novus RF Isento FIC FI Infraestrutura CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Novus Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '29853005000149'
+  nome: Oaktree Global Credit BRL FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Gama Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '38281467000120'
+  nome: Oaktree Global Credit USD Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Gama Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '25381854000196'
+  nome: Obento FIM CP IE
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '43104966000181'
+  nome: Oby Ágil FIRF RL
+  categoria_cvm: Renda Fixa
+  gestora: Oby Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '35844973000191'
+  nome: Oby Long Short FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: BJP Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '60594084000160'
+  nome: Occam Baixa Volatilidade FIC FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Occam Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '47586648000155'
+  nome: Occam Crédito Corporativo 30 FIC FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Occam Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '38267707000131'
+  nome: Occam Equity Hedge Advisory FIC FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Occam Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '11628883000103'
+  nome: Occam FIC FIA
+  categoria_cvm: Ações
+  gestora: Occam Investimentos
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '54344616000109'
+  nome: Occam Infra Ativo 30 FIC FIF RF Investimento Infra CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Occam Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '62298816000109'
+  nome: Occam Infra Sênior I RF FIC FI-Infra
+  categoria_cvm: Renda Fixa
+  gestora: Occam Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '15578417000103'
+  nome: Occam Institucional FIC FIF Multi II RL
+  categoria_cvm: Multimercado
+  gestora: Occam Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '46098897000139'
+  nome: Occam Liquidez FIC FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Occam Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '17164789000119'
+  nome: Occam Long & Short Plus FIC FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Occam Investimentos
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '35714550000157'
+  nome: Occam Long Biased Advisory FIC FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: Occam Investimentos
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '59560195000177'
+  nome: Occam Portfolio Crédito FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Occam Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '34475592000110'
+  nome: Occam Retorno Absoluto Advisory FIC FIF Multi - RL
+  categoria_cvm: Multimercado
+  gestora: Occam Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '15656344000120'
+  nome: OCEANA EQUITY HEDGE FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: Oceana Investimentos
+  classe_anbima: Multimercados Long and Short Neutro
+  grupo_looker: Multimercados Long and Short Neutro
+- cnpj: '33401080000146'
+  nome: Oceana Long Biased Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Oceana Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '26956042000194'
+  nome: Oceana Valor 30 FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Oceana Investimentos
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '46352768000125'
+  nome: Opportunity Global Equity em Dólar Institucional FIC de FIF Ações IE RL
+  categoria_cvm: Ações
+  gestora: Opportunity Asset Management
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '46351969000108'
+  nome: Opportunity Global Equity em Real Institucional FIC de FIF de Açoes IE RL
+  categoria_cvm: Ações
+  gestora: Opportunity Asset Management
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '54307808000145'
+  nome: Opportunity Income FIC FIF RF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Opportunity Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 00947958000194
+  nome: Opportunity Market FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Opportunity Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '13106983000197'
+  nome: Opportunity Selection FIC FIF Ações - Resp Limitada
+  categoria_cvm: Ações
+  gestora: Opportunity Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: 05448587000110
+  nome: Opportunity Total FIC de FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: Opportunity Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '52242659000158'
+  nome: Organon 60 FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Organon Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '39819658000165'
+  nome: Osmosis Global Equity Dólar Advisory Ações IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '14171578000115'
+  nome: Ouro Preto FIC FIM CP
+  categoria_cvm: Direito Creditório
+  gestora: Ouro Preto Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '51575078000175'
+  nome: PAAG11 - Pátria Crédito Agrícola FiAgro
+  categoria_cvm: Investimento Imobiliário
+  gestora: Pátria Investimentos
+  classe_anbima: FII Renda Gestão Ativa
+  grupo_looker: FII Renda Gestão Ativa
+- cnpj: '38252499000105'
+  nome: Pacifico Macro Advisory FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: BTG Pactual Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '31594537000150'
+  nome: Parcitas Hedge FIC FIF FIM RL
+  categoria_cvm: Multimercado
+  gestora: Parcitas Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '49983891000132'
+  nome: Pátria Crédito Estruturado 365 FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: Pátria Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '57286949000117'
+  nome: Pátria Igah Blend Advisory FIP RL - Subclasse A
+  categoria_cvm: Participações
+  gestora: Pátria Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '38954217000103'
+  nome: Pátria LB FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Pátria Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '36046327000141'
+  nome: Pátria Moneda Latam Corporate Credit FIC FIM CP Resp Limitada
+  categoria_cvm: Multimercado
+  gestora: Pátria Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '43120902000174'
+  nome: Pátria PE VII Advisory FIP Multi - Classe A
+  categoria_cvm: Participações - Multiestratégia
+  gestora: Pátria Investimentos
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '37567365000102'
+  nome: Pátria Pioneiro Long Only I Advisory II FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Pátria Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '61516572000112'
+  nome: PDIVER - Gama Pearl Diver Crédito Estruturado Global FIM RL
+  categoria_cvm: Multimercado
+  gestora: Gama Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '61794417000168'
+  nome: PDIVER II - Gama Pearl Diver Crédito Estruturado Global II F
+  categoria_cvm: Multimercado
+  gestora: Gama Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '10608762000129'
+  nome: Perfin Foresight Institucional FIC FIA
+  categoria_cvm: Ações
+  gestora: Perfin Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '47562149000128'
+  nome: Persevera Trinity FIRF REF DI RL
+  categoria_cvm: Renda Fixa
+  gestora: Persevera Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '51693641000100'
+  nome: Persevera Yield FIRF LP
+  categoria_cvm: Renda Fixa
+  gestora: Persevera Asset Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '45829737000150'
+  nome: PIER11 - Pátria Infra Energia Core Renda FIP INFRA
+  categoria_cvm: Participações - Infraestrutura
+  gestora: Pátria Investimentos
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '29066331000106'
+  nome: Pimco Global Financials Credit FIC de FIF Multimercado IE LP RL
+  categoria_cvm: Multimercado
+  gestora: PIMCO Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '32225478000106'
+  nome: PIMCO INCOME DÓLAR FIC de FIF Multimercado IE RL
+  categoria_cvm: Multimercado
+  gestora: PIMCO Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '23729512000199'
+  nome: Pimco Income FIC de FIF Multimercado IE RL
+  categoria_cvm: Multimercado
+  gestora: PIMCO Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '18316558000146'
+  nome: Plural Crédito Corporativo II FIC de FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Plural Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '30178843000143'
+  nome: Plural Debentures Incentivadas Hedge 30 FIC FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Plural Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '15350679000116'
+  nome: Plural High Grade FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Plural Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '11616354000181'
+  nome: Plural Yield FIF RF Referenciado DI RL
+  categoria_cvm: Renda Fixa
+  gestora: Plural Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '31455879000190'
+  nome: Polo Crédito Corporativo Advisory FIC FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Polo Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '43164438000118'
+  nome: Polo Crédito Estruturado 90 FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Polo Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '27347332000101'
+  nome: Polo Long Bias I FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Polo Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '07013315000112'
+  nome: Polo Norte I LS FIC FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Polo Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '23601467000192'
+  nome: Polo Total Credit FIC FIF Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: Polo Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: 00398561000190
+  nome: Porto Alisios FIC FIA
+  categoria_cvm: Ações
+  gestora: Porto Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: 02603461000184
+  nome: Porto Seguro Clássico RF FIC FI LP
+  categoria_cvm: Renda Fixa
+  gestora: Porto Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '18719154000101'
+  nome: Porto Seguro FIRF Referenciado DI CP
+  categoria_cvm: Renda Fixa
+  gestora: Porto Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '24011864000177'
+  nome: Porto Seguro IMA-B5 FIC FIRF LP
+  categoria_cvm: Renda Fixa
+  gestora: Porto Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '35378376000119'
+  nome: Porto Seguro Ipê RF FIC FI CP LP
+  categoria_cvm: Renda Fixa
+  gestora: Porto Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '11447136000160'
+  nome: Principal Claritas FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '43761750000199'
+  nome: Principal Claritas Institucional Feeder II FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '34286544000183'
+  nome: Principal Claritas Long Bias FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: 05109839000186
+  nome: Principal Claritas Long Short FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '31416575000113'
+  nome: Principal Claritas Quant FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '11357735000193'
+  nome: Principal Claritas Valor FIF em Ações RL - Subclasse A
+  categoria_cvm: Ações
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '17302010000184'
+  nome: Principal Global High Yield FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: Principal Asset Management LTDA
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '59376795000180'
+  nome: Prinz Liquidez FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: Prinz Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Crédito Livre
+  grupo_looker: Renda Fixa Duração Baixa Crédito Livre
+- cnpj: '32817365000108'
+  nome: PV FIA
+  categoria_cvm: Ações
+  gestora: EuQueroInvestir Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '34508815000106'
+  nome: QR Blockchain Assets I FIC FIM IE
+  categoria_cvm: Multimercado
+  gestora: QR Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '11451917000129'
+  nome: Quantitas FIA Montecristo BDR Nível I
+  categoria_cvm: Ações
+  gestora: Quantitas Asset Management
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '22918359000185'
+  nome: Quantitas FIC FIM Mallorca
+  categoria_cvm: Multimercado
+  gestora: Quantitas Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '27928186000108'
+  nome: Quantitas FIM Galápagos
+  categoria_cvm: Multimercado
+  gestora: Quantitas Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '29206196000157'
+  nome: Quasar Advantage FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Quasar Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '29196922000106'
+  nome: Quasar Advantage Plus FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Quasar Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '31506482000180'
+  nome: Quasar Fundo Incentivado de Investimento em Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Quasar Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '44951827000156'
+  nome: RBR Club III Advisory FIM CP IE
+  categoria_cvm: Multimercado
+  gestora: RBR Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '58429506000109'
+  nome: RBR Club IV FIP RL
+  categoria_cvm: Participações - Multiestratégia
+  gestora: RBR Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '60022798000102'
+  nome: RBR Infra DI Renda Mais FI Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: RBR Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Crédito Livre
+  grupo_looker: Renda Fixa Duração Baixa Crédito Livre
+- cnpj: '44982118000138'
+  nome: RBRJ11 - RBR Infra Crédito FIC INFRA RF
+  categoria_cvm: Renda Fixa
+  gestora: RBR Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '20468028000165'
+  nome: Reach FIA
+  categoria_cvm: Ações
+  gestora: Reach Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '26362460000153'
+  nome: Reach Total Return FIC FIA
+  categoria_cvm: Ações
+  gestora: Reach Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '10500884000105'
+  nome: Real Investor FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Real Investor Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '28911549000157'
+  nome: Real Investor FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Real Investor Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '31844667000102'
+  nome: RedPoint Eventures Advisory FIP Multiestratégia IE
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: 09543255000175
+  nome: Rio Bravo CP FIRF
+  categoria_cvm: Renda Fixa
+  gestora: Rio Bravo Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '36436794000188'
+  nome: Riza Daikon Advisory FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Riza Líquidos Gestora de Recursos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '48969198000142'
+  nome: Riza Évora Debêntures Incentivadas Juros Ativos FIF em Cotas de FIRF
+  categoria_cvm: Renda Fixa
+  gestora: Riza Líquidos Gestora de Recursos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '36498670000127'
+  nome: Riza Lotus FIF RF - Referenciada DI CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Riza Líquidos Gestora de Recursos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '43917493000131'
+  nome: Riza Lotus Plus Advisory FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: Riza Líquidos Gestora de Recursos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '36498149000190'
+  nome: Riza Meyenii 180 Advisory FIF de Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Riza Allocation Gestora de Recursos
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '43508091000183'
+  nome: Riza Meyenii 360 Advisory FIF de Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Riza Allocation Gestora de Recursos
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '42260903000151'
+  nome: Riza Statheros FIC de FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Riza Allocation Gestora de Recursos
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '46962243000101'
+  nome: Riza Tavros LB FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Riza Líquidos Gestora de Recursos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '59987139000113'
+  nome: RIZA VISEU FII RL - CLASSE A - 2ª Emissão - 1ª Série
+  categoria_cvm: Investimento Imobiliário
+  gestora: Riza Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '42405028000159'
+  nome: Root Capital Crédito HG Plus FIC de FIF Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: Root Capital
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '57271402000148'
+  nome: Root Capital Figueira FIDC de Responsab Limit
+  categoria_cvm: Direito Creditório
+  gestora: Root Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '34431610000161'
+  nome: Root Capital High Yield Advisory FIC de FIF Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: Root Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '27783868000161'
+  nome: RPS FIF em Cotas de FIA Selection
+  categoria_cvm: Ações
+  gestora: RPS Capital
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '59225536000158'
+  nome: RPS LB Argentina FIF em Cotas de FIA RL
+  categoria_cvm: Ações
+  gestora: RPS Capital
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '34706586000126'
+  nome: RPS Long Bias Advisory D30 FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: RPS Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '41153236000145'
+  nome: RPS Total Return Advisory D30 FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: RPS Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '50750438000165'
+  nome: RZDS11 - Riza Domus FII
+  categoria_cvm: Investimento Imobiliário
+  gestora: Riza Asset Management
+  classe_anbima: FII Hibrido Gestão Ativa
+  grupo_looker: FII Hibrido Gestão Ativa
+- cnpj: '23960625000109'
+  nome: Safari 30 FIF em Cotas de FIM II
+  categoria_cvm: Multimercado
+  gestora: Safari Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '33796084000170'
+  nome: Safari LB Strategy FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Safari Capital
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '12796232000187'
+  nome: Safra Agilité FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: Safra Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '18623722000168'
+  nome: Safra Debêntures Incentivadas CP FIC FIM
+  categoria_cvm: Renda Fixa
+  gestora: Safra Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '02536364000116'
+  nome: Safra DI Master FIRF Referenciado DI LP
+  categoria_cvm: Renda Fixa
+  gestora: Safra Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '52242738000169'
+  nome: Safra Extra Bancos Special FIC FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: Safra Asset Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '23714047000112'
+  nome: Safra Grand Vitesse FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: '-'
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '30056825000199'
+  nome: Safra Polaris Classe de Investimento RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Safra DTVM
+  classe_anbima: Renda Fixa Duração Média Grau de Investimento
+  grupo_looker: Renda Fixa Duração Média Grau de Investimento
+- cnpj: '11447124000136'
+  nome: Safra Vitesse Classe de Investimento RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Safra Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '35744790000102'
+  nome: Schroder Gaia Contour Tech Equity Long & Short BRL FI Financeiro - CIC Mult
+    IE - Resp Limitada
+  categoria_cvm: Multimercado
+  gestora: Schroder Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '31961612000174'
+  nome: Schroder High Grade Advisory FIRF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Schroder Asset Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '37539419000126'
+  nome: Schroder Premium 30 Advisory FIRF CP LP
+  categoria_cvm: Renda Fixa
+  gestora: Schroder Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '31403572000145'
+  nome: Selection Ações FIC FIA
+  categoria_cvm: Ações
+  gestora: XP Advisory
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '38221605000185'
+  nome: Selection Ações Globais FIC FIA IE
+  categoria_cvm: Ações
+  gestora: XP Advisory
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '32889197000158'
+  nome: Selection Debêntures Incentivadas FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '24582422000180'
+  nome: Selection Long Biased FIC FIM
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '24582449000173'
+  nome: Selection Multimercado FIC FIM
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '35939801000100'
+  nome: Selection Multimercado Internacional FIC FIM
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '30518346000147'
+  nome: Selection Multimercado Plus FIC FIM
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '39726030000115'
+  nome: Selection RF Global FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '34957512000162'
+  nome: Selection RF High Yield FIC FIM CP LP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '24572219000123'
+  nome: Selection RF Light FIC FIRF CP LP
+  categoria_cvm: Renda Fixa
+  gestora: XP Advisory
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '45089490000182'
+  nome: Selection Stock Pickers FIA
+  categoria_cvm: Ações
+  gestora: XP Advisory
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '37887412000103'
+  nome: Sharp Equity Value Advisory FIF em Cotas de FIF em Ações
+  categoria_cvm: Ações
+  gestora: Sharp Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: 08912569000135
+  nome: Sharp Ibovespa Ativo Feeder FIC de FIA em Ações RL
+  categoria_cvm: Ações
+  gestora: Sharp Investimentos
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '33497084000170'
+  nome: Sharp Long Biased Advisory FIF em Cotas de FIF em Ações
+  categoria_cvm: Ações
+  gestora: Sharp Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '36326889000149'
+  nome: Sharp Long Short 2X Advisory FIF em Cotas de FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: Sharp Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: 07279819000189
+  nome: Sharp LS FIM RL
+  categoria_cvm: Multimercado
+  gestora: Sharp Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '38029012000111'
+  nome: Solana Açoes FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Solana Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '18772290000157'
+  nome: Solana Long Short FIF em Cotas FIM
+  categoria_cvm: Multimercado
+  gestora: Solana Investimentos
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '34583819000140'
+  nome: Solis Capital Antares Advisory FIC de FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Solis Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '34780531000166'
+  nome: Solis Capital Antares Light FIC de FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Solis Investimentos
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '55318040000178'
+  nome: Solis Capital Antares Pioneiro FIC FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Solis Investimentos
+  classe_anbima: FIDC Outros
+  grupo_looker: FIDC Outros
+- cnpj: '58525584000107'
+  nome: Solis Portfolio Crédito CDI+ FIC FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Solis Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '36352361000144'
+  nome: Sparta Debêntures Incentivadas 45 FIC de FIF Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '26759909000111'
+  nome: Sparta Debêntures Incentivadas FIC de Fundos Incentivados de Investimento
+    Financeiro em Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '39959025000152'
+  nome: Sparta Debêntures Incentivadas Inflação FIC de Fundos Incentivados de Investimento
+    Financeiro
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '36352376000102'
+  nome: Sparta Max A60 FIC FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Média Crédito Livre
+  grupo_looker: Renda Fixa Duração Média Crédito Livre
+- cnpj: '32757330000112'
+  nome: Sparta Max Advisory FIC de FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Média Crédito Livre
+  grupo_looker: Renda Fixa Duração Média Crédito Livre
+- cnpj: '56992930000123'
+  nome: Sparta Pré 2028 FI-Infra RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '12923387000137'
+  nome: Sparta Premium FIC de FIF RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '54426679000104'
+  nome: Sparta Renda FIF-Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '32846811000102'
+  nome: Sparta Top Advisory FIC FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Média Grau de Investimento
+  grupo_looker: Renda Fixa Duração Média Grau de Investimento
+- cnpj: '14188162000100'
+  nome: Sparta Top FIC FIF RF CP LP - Resp Limitada
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Média Grau de Investimento
+  grupo_looker: Renda Fixa Duração Média Grau de Investimento
+- cnpj: '38026926000129'
+  nome: Sparta Top Inflação FIC FIF RF CP LP - Resp Limitada
+  categoria_cvm: Renda Fixa
+  gestora: Sparta Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '52019407000164'
+  nome: SPORTS MEDIA FUTEBOL
+  categoria_cvm: Participações - Multiestratégia
+  gestora: LCP Gestora de Recursos
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '51931205000121'
+  nome: Sports Media Futebol Brasileiro - Classe A - Advisory FIP
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Asset Management
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '58290688000171'
+  nome: SPX CRI Portfolio Renda Mais
+  categoria_cvm: Investimento Imobiliário
+  gestora: SPX REAL ESTATE GESTÃO DE RECURSOS LTDA.
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '42902399000146'
+  nome: SPX Falcon 2 FIC FIA
+  categoria_cvm: Ações
+  gestora: SPX Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '24215286000190'
+  nome: SPX Falcon Armata Advisory FIC FIA
+  categoria_cvm: Ações
+  gestora: SPX Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '16617768000149'
+  nome: SPX Falcon FIC FIA
+  categoria_cvm: Ações
+  gestora: SPX Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '12831360000114'
+  nome: SPX Nimitz Feeder FIC FIM
+  categoria_cvm: Multimercado
+  gestora: SPX Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '24193691000155'
+  nome: SPX Nimitz Gripen Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: SPX Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '15334585000153'
+  nome: SPX Patriot FIC FIA
+  categoria_cvm: Ações
+  gestora: SPX Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '46300253000181'
+  nome: SPX Private Equity I Advisory FIP Multi - Classe A
+  categoria_cvm: Participações - Multiestratégia
+  gestora: SPX Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '41342497000103'
+  nome: SPX Raptor 180 Advisory FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: SPX Capital
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '12809201000113'
+  nome: SPX Raptor Feeder FIF CIC Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: SPX Capital
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '35648999000164'
+  nome: SPX Seahawk Advisory FIC FIRF CP LP
+  categoria_cvm: Renda Fixa
+  gestora: SPX Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '53077797000191'
+  nome: SPX SEAHAWK DEB INCE
+  categoria_cvm: Renda Fixa
+  gestora: BESAF
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '53110230000170'
+  nome: SPX Seahawk Deb Incentivadas Advisory FIF CIC Incentivado RL
+  categoria_cvm: Renda Fixa
+  gestora: SPX Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '57660316000127'
+  nome: SPX Seahawk Debêntures Incentivadas D45 FIF CIC Infra RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: SPX Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '37069872000116'
+  nome: SPX Seahawk Plus Advisory FIF CIC Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: SPX Capital
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '38377471000196'
+  nome: Squadra LB Advisory XP FIC de FIA
+  categoria_cvm: Ações
+  gestora: Squadra Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '30282418000108'
+  nome: Starboard Special Situations II Advisory FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '12282747000169'
+  nome: STK Long Biased FIC FIF Ações - Resp Limitada
+  categoria_cvm: Ações
+  gestora: STK Capital
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '17164804000129'
+  nome: STK Long Only FIF Ações - Resp Limitada
+  categoria_cvm: Ações
+  gestora: STK Capital
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '17301119000105'
+  nome: Studio 30 FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Studio Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '11225767000135'
+  nome: Studio Institucional FIC FIA
+  categoria_cvm: Ações
+  gestora: Studio Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '44157044000103'
+  nome: Studio Long Bias FIC FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Studio Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '17797493000135'
+  nome: SulAmérica Apollo FIM
+  categoria_cvm: Multimercado
+  gestora: SulAmérica Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: 07381653000107
+  nome: SulAmérica Ativo FIF CIRF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '13823084000105'
+  nome: SulAmérica Crédito Ativo FIRF CP LP
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '33701828000126'
+  nome: SulAmérica Crédito ESG FIRF CP LP IS
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '11458144000102'
+  nome: SulAmérica Equities FIA
+  categoria_cvm: Ações
+  gestora: SulAmérica Investimentos
+  classe_anbima: Ações Valor/Crescimento
+  grupo_looker: Ações Valor/Crescimento
+- cnpj: '12839769000187'
+  nome: SulAmérica Evolution FI Multimercado
+  categoria_cvm: Multimercado
+  gestora: SulAmérica Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: 04899128000190
+  nome: SulAmérica Excellence FIRF CP
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '55763285000104'
+  nome: Sulamérica Excellence Plus FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 04839017000198
+  nome: SulAmérica Exclusive FIRF REF DI
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Soberano
+  grupo_looker: Renda Fixa Duração Baixa Soberano
+- cnpj: 09326708000101
+  nome: SulAmérica Inflatie FIRF LP
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Alta Soberano
+  grupo_looker: Renda Fixa Duração Alta Soberano
+- cnpj: '22759995000101'
+  nome: SulAmérica INFRA FI INFRA RF
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '24325096000126'
+  nome: SulAmérica Premium FIRF Referenciado DI CP
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '47715703000160'
+  nome: SulAmérica Premium Plus FIRF Referenciado DI CP
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '23502654000119'
+  nome: Sulamérica Retorno Total FI RF LP
+  categoria_cvm: Renda Fixa
+  gestora: SulAmérica Investimentos
+  classe_anbima: Renda Fixa Duração Livre Soberano
+  grupo_looker: Renda Fixa Duração Livre Soberano
+- cnpj: '34525068000106'
+  nome: SulAmérica Selection FIC FIA
+  categoria_cvm: Ações
+  gestora: SulAmérica Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '46331231000189'
+  nome: Suno FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Suno Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '39723347000106'
+  nome: Systematica Blue Trend Advisory FIC FIM IE
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '39723244000138'
+  nome: Systematica Blue Trend Dolar Advisory FIC FIM IE
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '42922205000174'
+  nome: Tarpon GT 90 FIF FIA
+  categoria_cvm: Ações
+  gestora: Tarpon Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '38028896000190'
+  nome: TARUÁ FIC FIA
+  categoria_cvm: Ações
+  gestora: Taruá Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '34096201000156'
+  nome: Tavola Absoluto Advisory FIC de FIM
+  categoria_cvm: Multimercado
+  gestora: Távola Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '40575693000165'
+  nome: Távola Equity Hedge 15 FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: Távola Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '50955280000160'
+  nome: Távola Equity Hedge 5 FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: Távola Capital
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '47511300000107'
+  nome: TB Advisory FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: TB Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '52314487000180'
+  nome: TB Advisory II FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: TB Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: 00906044000185
+  nome: Tempo Capital Manacá FIC de FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: Tempo Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '45126846000100'
+  nome: Tenax Ações FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Tenax Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '45126795000117'
+  nome: Tenax Macro FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Tenax Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '53936458000113'
+  nome: Tenax RFA Incentivado FIF CIC Incentivado Investimento DEB I
+  categoria_cvm: Renda Fixa
+  gestora: Tenax Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '45126753000186'
+  nome: Tenax Total Return FIF CIC Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Tenax Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '60513922000124'
+  nome: TG Renda Urbana Feeder FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: '-'
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '60551924000108'
+  nome: TG Renda Urbana Máster FII – Subclasse B
+  categoria_cvm: Investimento Imobiliário
+  gestora: '-'
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '44625562000104'
+  nome: TGRE11 - TG Real Estate
+  categoria_cvm: Investimento Imobiliário
+  gestora: TG Core Asset Management
+  classe_anbima: FII Hibrido Gestão Ativa
+  grupo_looker: FII Hibrido Gestão Ativa
+- cnpj: '44625657000110'
+  nome: TGRI11 – TG Renda Imobiliária Sênior A
+  categoria_cvm: Investimento Imobiliário
+  gestora: TG Core Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '61020441000140'
+  nome: Tivio Alt 90 FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Tivio Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '58038938000180'
+  nome: Tivio Alt Credito High Yield 180 FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Tivio Capital
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '10347493000194'
+  nome: Tivio Banks RF CP FIF RL
+  categoria_cvm: Renda Fixa
+  gestora: Tivio Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: 04240128000183
+  nome: Tivio Crédito Ativo FIF
+  categoria_cvm: Renda Fixa
+  gestora: Tivio Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: 03319016000150
+  nome: Tivio Dólar Cambial FIF CIC Cambial RL
+  categoria_cvm: Cambial
+  gestora: Tivio Capital
+  classe_anbima: Cambial
+  grupo_looker: Cambial
+- cnpj: 06866051000187
+  nome: Tivio Institucional RF CP FIF RL
+  categoria_cvm: Renda Fixa
+  gestora: Tivio Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: 00836263000135
+  nome: Tivio RF Ativo LP FI
+  categoria_cvm: Renda Fixa
+  gestora: Tivio Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '32485590000186'
+  nome: Tivo Plus RF Fundo Incentivado de Investimento Financeiro em Infra RL
+  categoria_cvm: Renda Fixa
+  gestora: Tivio Capital
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '34428006000186'
+  nome: Tork Advisory 30 FIF em Cotas FIA RL
+  categoria_cvm: Ações
+  gestora: Tork Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '31493876000140'
+  nome: Tork FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Tork Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '31533145000181'
+  nome: Tork Long Only Institucional FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Tork Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '35957054000124'
+  nome: Tork Only Feeder I FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Tork Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '41360111000196'
+  nome: Trafalgar Royal Long Bias FIC FIA
+  categoria_cvm: Ações
+  gestora: Trafalgar Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '53740335000102'
+  nome: Treecorp IV FIP Multiestratégia - Responsabilidade Limitada - Subclasse D
+  categoria_cvm: Participações - Multiestratégia
+  gestora: Treecorp Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '58172632000112'
+  nome: TREND B3 BR+ FIA RL
+  categoria_cvm: Ações
+  gestora: XP Asset Management
+  classe_anbima: Ações Indexados
+  grupo_looker: Ações Indexados
+- cnpj: '43105341000134'
+  nome: Trend Bitcoin FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '36327455000163'
+  nome: Trend Bolsa Americana Alavancada FIF FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '31874833000105'
+  nome: Trend Bolsa Americana Dolar FIF FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '31145826000172'
+  nome: Trend Bolsa Americana FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '35717740000128'
+  nome: Trend Bolsa Chinesa FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '40212899000120'
+  nome: Trend Bolsas Emergentes FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '39227204000103'
+  nome: Trend Bolsas Europeias FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '37553464000135'
+  nome: Trend Bolsas Globais FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '45823918000179'
+  nome: Trend Cash CIC de Classes RF Simples RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Simples
+  grupo_looker: Renda Fixa Simples
+- cnpj: '40212817000148'
+  nome: Trend Commodities FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '59791603000100'
+  nome: Trend Crédito Brasil FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Indexados
+  grupo_looker: Renda Fixa Indexados
+- cnpj: '44835930000130'
+  nome: TREND CRÉDITO GLOBAL FIF MULTIMERCADO RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '45278833000157'
+  nome: Trend DI FIC RF Simples RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Simples
+  grupo_looker: Renda Fixa Simples
+- cnpj: '55630600000125'
+  nome: Trend Dividendos Brasil FIA Resp Limitada
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '31132386000119'
+  nome: Trend Dolar FIF Cambial RL
+  categoria_cvm: Cambial
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Cambial
+  grupo_looker: Cambial
+- cnpj: '37108062000121'
+  nome: Trend ESG Global FIM IS RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '38597202000135'
+  nome: Trend Euro FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '37396932000105'
+  nome: TREND HIGH YIELD AMERICANO FIF MULTIMERCADO RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '31936857000141'
+  nome: Trend Ibovespa Alavancado FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '31204199000101'
+  nome: Trend Ibovespa FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '31145833000174'
+  nome: Trend Inflação Curta FIRF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Duração Alta Soberano
+  grupo_looker: Renda Fixa Duração Alta Soberano
+- cnpj: '34475424000124'
+  nome: Trend Inflação Geral FIRF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Duração Livre Soberano
+  grupo_looker: Renda Fixa Duração Livre Soberano
+- cnpj: '38026814000178'
+  nome: Trend Inflação Longa FIF FIRF RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '44431925000162'
+  nome: Trend Inteligencia Artificial CIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '47033461000124'
+  nome: Trend Momentum Brasil FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '40212883000118'
+  nome: Trend Nasdaq 100 FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '35609786000123'
+  nome: Trend Ouro Dólar FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '22963439000152'
+  nome: Trend Ouro FIF Multi RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '26559284000144'
+  nome: Trend Pós-Fixado FIC FIRF Simples RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Simples
+  grupo_looker: Renda Fixa Simples
+- cnpj: '38027135000113'
+  nome: Trend Prata FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '31145851000156'
+  nome: Trend Pré-Fixado FIRF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Indexados
+  grupo_looker: Renda Fixa Indexados
+- cnpj: '47033348000149'
+  nome: Trend Qualidade Brasil FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '32246789000151'
+  nome: Trend Short Dolar FIF Cambial RL
+  categoria_cvm: Cambial
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Cambial
+  grupo_looker: Cambial
+- cnpj: '35956046000163'
+  nome: Trend Small Caps FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Small Caps
+  grupo_looker: Ações Small Caps
+- cnpj: '32319351000156'
+  nome: Trend Tecnologia Americana FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '47033388000190'
+  nome: Trend Valor Brasil FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '35625840000124'
+  nome: Trend XP Inc FIC FIF em Ações RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '54026669000181'
+  nome: Tríade CIC CLasses FIM CP Resp Limitada
+  categoria_cvm: Multimercado
+  gestora: Paramis Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '35471498000155'
+  nome: Trígono Flagship 60 Small Caps FIF em Cotas de FIA
+  categoria_cvm: Ações
+  gestora: Trígono Capital
+  classe_anbima: Ações Small Caps
+  grupo_looker: Ações Small Caps
+- cnpj: '26269603000187'
+  nome: Truxt I Valor FIC FIA
+  categoria_cvm: Ações
+  gestora: Truxt Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '26277595000110'
+  nome: Truxt I Valor Institucional FIC FIA
+  categoria_cvm: Ações
+  gestora: Truxt Investimentos
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '30830162000118'
+  nome: Truxt Long Bias Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Truxt Investimentos
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '26262363000199'
+  nome: Truxt LS Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Truxt Investimentos
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '26261488000102'
+  nome: Truxt Macro Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Truxt Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '30509221000150'
+  nome: V8 Cash FIC FIRF
+  categoria_cvm: Renda Fixa
+  gestora: V8 Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '42774627000140'
+  nome: V8 Cash Platinum FIF
+  categoria_cvm: Renda Fixa
+  gestora: V8 Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '39354762000121'
+  nome: V8 Speedway Long Short FIF FIF Multimercado
+  categoria_cvm: Multimercado
+  gestora: V8 Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '36017289000107'
+  nome: V8 Vanquish Termo FIF
+  categoria_cvm: Renda Fixa
+  gestora: V8 Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '39977091000155'
+  nome: Valor Opportunity Fund II FIP Multiestratégia IE
+  categoria_cvm: Participações - Multiestratégia
+  gestora: Genial Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '10326625000100'
+  nome: Valora Absolute FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: Valora Renda Fixa
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '60535430000130'
+  nome: Valora CRI CDI Renda+ FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: Valora Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '25213355000190'
+  nome: Valora Guardian Advisory FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Valora Renda Fixa
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '17313316000136'
+  nome: Valora Horizon High Yield FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Valora Renda Fixa
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '59657690000107'
+  nome: Valora Vanguard FIC de FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Valora Renda Fixa
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '36326980000164'
+  nome: Velt 90 Advisory FIC FIA
+  categoria_cvm: Ações
+  gestora: XP Advisory
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: 07088369000147
+  nome: Ventor Hedge FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Ventor Investimentos
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '60079651000140'
+  nome: Verde A&I Portfolio Renda Mais FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: Verde Asset Agro e Imobiliário Ltda
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '23243536000133'
+  nome: Verde AM Ações FIC de FIF em Açoes RL
+  categoria_cvm: Ações
+  gestora: Verde Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '54851094000131'
+  nome: Verde AM Ipê FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Verde Asset Management
+  classe_anbima: FIDC Outros
+  grupo_looker: FIDC Outros
+- cnpj: '37013129000144'
+  nome: Verde AM Mundi Ações Globais BRL FIC FIA RL
+  categoria_cvm: Ações
+  gestora: Verde Asset Management
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '34831155000191'
+  nome: Verde AM Mundi Ações Globais FIF CIC Ações RL
+  categoria_cvm: Ações
+  gestora: Verde Asset Management
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '24048538000134'
+  nome: Verde AM Scena Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Verde Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '31403590000127'
+  nome: Verde AM X60 Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: Verde Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '46405812000118'
+  nome: VGIE11 - Valora Infra Dívida FIP IE
+  categoria_cvm: Participações - Infraestrutura
+  gestora: Valora Investimentos
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '50180894000117'
+  nome: VGPR11 - Valora Imobiliário Multiestratégia Premium
+  categoria_cvm: Investimento Imobiliário
+  gestora: Valora Investimentos
+  classe_anbima: FII TVM Gestão Ativa
+  grupo_looker: FII TVM Gestão Ativa
+- cnpj: '44614833000118'
+  nome: VICA11 - Vinci Crédito FIAgro
+  categoria_cvm: Investimento Imobiliário
+  gestora: Vinci Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '24572582000149'
+  nome: Vinci Atlas FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Vinci Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '50764538000140'
+  nome: Vinci Capital Partners IV - Classe A - Advisory FIP Multiest
+  categoria_cvm: Participações - Multiestratégia
+  gestora: Vinci Asset Management
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '22150467000150'
+  nome: Vinci Crédito Estruturado Selection Advisory FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Vinci Asset Management
+  classe_anbima: Multimercados Dinâmico
+  grupo_looker: Multimercados Dinâmico
+- cnpj: '56992610000173'
+  nome: Vinci Crédito Portfólio CDI+ FIDC
+  categoria_cvm: Direito Creditório
+  gestora: Vinci Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '38057650000146'
+  nome: Vinci Impacto e Retorno Advisory FIP Multiestratégia IS
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Asset Management
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '40226014000142'
+  nome: Vinci Mosaico Advisory FIF CIA RL
+  categoria_cvm: Ações
+  gestora: Vinci Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '12440825000106'
+  nome: Vinci Multiestratégia FIM
+  categoria_cvm: Multimercado
+  gestora: Vinci Asset Management
+  classe_anbima: Multimercados Juros e Moedas
+  grupo_looker: Multimercados Juros e Moedas
+- cnpj: '60573726000145'
+  nome: Vinci Premium Liquidez FIF CRF RL
+  categoria_cvm: Renda Fixa
+  gestora: Vinci Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '40127685000156'
+  nome: Vinci Retorno Real FIM
+  categoria_cvm: Multimercado
+  gestora: Vinci Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '12287682000144'
+  nome: Vinci Seleção FIA
+  categoria_cvm: Ações
+  gestora: Vinci Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '35636909000115'
+  nome: Vinci Total Return FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Vinci Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '13396703000122'
+  nome: Vinci Valorem FIM
+  categoria_cvm: Multimercado
+  gestora: Vinci Asset Management
+  classe_anbima: Multimercados Juros e Moedas
+  grupo_looker: Multimercados Juros e Moedas
+- cnpj: '61543507000186'
+  nome: Vinland 2 Ativo Debêntures de Infra FI RF
+  categoria_cvm: Renda Fixa
+  gestora: Vinland Capital Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '34687441000125'
+  nome: Vinland Ativo Advisory FIF CIC RF LP - Resp Limitada
+  categoria_cvm: Renda Fixa
+  gestora: Vinland Capital
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '53678015000170'
+  nome: Vinland Crédito 10 FIC FIRF
+  categoria_cvm: Renda Fixa
+  gestora: Vinland Capital Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '47640954000122'
+  nome: Vinland Crédito Estruturado FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: Vinland Capital Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '47684408000193'
+  nome: Vinland Crédito Multimercado FIC FI CP
+  categoria_cvm: Multimercado
+  gestora: Vinland Capital Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '50862124000154'
+  nome: Vinland Incentivado Debêntures Infra Ativo FIF RF CP LP RL - Subclasse I
+  categoria_cvm: Renda Fixa
+  gestora: Vinland Capital Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '28581039000169'
+  nome: Vinland Long Bias Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Vinland Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '30593403000152'
+  nome: Vinland Long Only FIC FIA
+  categoria_cvm: Ações
+  gestora: Vinland Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '28581109000189'
+  nome: Vinland Macro Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Vinland Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '41409831000107'
+  nome: Vinland Macro Plus Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Vinland Capital
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '43985508000107'
+  nome: Vista Hedge Advisory FIC FIM
+  categoria_cvm: Multimercado
+  gestora: Vista Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '30057258000195'
+  nome: Vista Hedge FIF em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Vista Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '57339074000174'
+  nome: Vista Macro Absoluto FI Financeiro em Cotas de FIM
+  categoria_cvm: Multimercado
+  gestora: Vista Capital
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '40920005000157'
+  nome: Vista Multiestratégia Advisory FIF em Cotas FIM RL
+  categoria_cvm: Multimercado
+  gestora: Vista Capital
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '23176630000117'
+  nome: Vixrax FIM CP
+  categoria_cvm: Multimercado
+  gestora: Levante Investimentos
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '41681126000156'
+  nome: VRB FIC FIA
+  categoria_cvm: Ações
+  gestora: Tera Capital
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '24140275000199'
+  nome: VRB FIM
+  categoria_cvm: Multimercado
+  gestora: Tera Capital
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '57976525000184'
+  nome: VRB Liquidez FIC RF CP Referenciado DI
+  categoria_cvm: Renda Fixa
+  gestora: XP Advisory
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '52923285000136'
+  nome: Welfare AM 2 FIA
+  categoria_cvm: Ações
+  gestora: XP Advisory
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '38443120000136'
+  nome: Wellington Asia Technology Advisory FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '38077221000130'
+  nome: Wellington European Equity Advisory FIA RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '37405108000174'
+  nome: Wellington Schroder Gaia BRL FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: Schroder Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '42101954000130'
+  nome: Wellington US BDR Advisory FIC FIA BDR Nível I
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '35556444000192'
+  nome: Wellington Ventura Advisory CI Ações IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '35578709000153'
+  nome: Wellington Ventura Dólar Advisory CI Ações IE RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '19831126000136'
+  nome: Western Asset BDR FIF
+  categoria_cvm: Ações
+  gestora: Western Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '49983964000196'
+  nome: Western Asset Crédito Bancário Plus FIF RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: Western Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: 00819889000133
+  nome: Western Asset Hedge Dólar FIF
+  categoria_cvm: Cambial
+  gestora: Western Asset Management
+  classe_anbima: Cambial
+  grupo_looker: Cambial
+- cnpj: 09087301000179
+  nome: Western Asset IMA-B Ativo FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: Western Asset Management
+  classe_anbima: Renda Fixa Duração Livre Soberano
+  grupo_looker: Renda Fixa Duração Livre Soberano
+- cnpj: '17517577000178'
+  nome: Western Asset IMA-B5 FIF RF
+  categoria_cvm: Renda Fixa
+  gestora: Western Asset Management
+  classe_anbima: Renda Fixa Duração Livre Soberano
+  grupo_looker: Renda Fixa Duração Livre Soberano
+- cnpj: 07672392000184
+  nome: Western Asset LS FIF
+  categoria_cvm: Multimercado
+  gestora: Western Asset Management
+  classe_anbima: Multimercados Long and Short Neutro
+  grupo_looker: Multimercados Long and Short Neutro
+- cnpj: 05024659000100
+  nome: Western Asset Multitrading H Multimercado FI
+  categoria_cvm: Multimercado
+  gestora: Western Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: 03499367000190
+  nome: Western Asset RF Ativo FI
+  categoria_cvm: Renda Fixa
+  gestora: Western Asset Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: 04192419000143
+  nome: Western Asset RF Ativo Max FIF
+  categoria_cvm: Renda Fixa
+  gestora: Western Asset Management
+  classe_anbima: Renda Fixa Duração Livre Soberano
+  grupo_looker: Renda Fixa Duração Livre Soberano
+- cnpj: '28320756000137'
+  nome: Western Asset Total Credit Advisory FIC de FIF RF CP
+  categoria_cvm: Renda Fixa
+  gestora: Western Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '49984055000172'
+  nome: Western Asset Total Credit Plus FIF
+  categoria_cvm: Renda Fixa
+  gestora: Western Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '17453850000148'
+  nome: Western Asset US Index 500 FIF
+  categoria_cvm: Multimercado
+  gestora: Western Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: 09087523000191
+  nome: Western Asset Valuation FIF
+  categoria_cvm: Ações
+  gestora: Western Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '41710472000115'
+  nome: WHG Alpha Dinâmico FIC FIM CP IE
+  categoria_cvm: Multimercado
+  gestora: WHG Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '45521716000172'
+  nome: WHG Global LB BRL FIC FIA IE
+  categoria_cvm: Ações
+  gestora: WHG Asset Management
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '41409761000189'
+  nome: WHG Global Long Biased BRL FIC FIA IE
+  categoria_cvm: Ações
+  gestora: WHG Asset Management
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '41423887000108'
+  nome: WHG Global Long Biased USD FIC FIA IE
+  categoria_cvm: Ações
+  gestora: WHG Asset Management
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '41978534000174'
+  nome: WHG RF Dinâmico FIC FIM
+  categoria_cvm: Multimercado
+  gestora: WHG Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '45756473000151'
+  nome: XP Balanceado Fundo Mútuo de Privatização - FGTS Carteira Livre RL
+  categoria_cvm: Privatização
+  gestora: XP Asset Management
+  classe_anbima: Ações FMP - FGTS
+  grupo_looker: Ações FMP - FGTS
+- cnpj: '50088190000119'
+  nome: XP Bancos FIC RF Referenciada DI CP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '35377390000106'
+  nome: XP Bancos FIRF Referenciada DI CP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '51385048000104'
+  nome: XP Carnaúba FII - Classe A
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: FII Desenvolvimento para Venda Gestão Ativa
+  grupo_looker: FII Desenvolvimento para Venda Gestão Ativa
+- cnpj: '61245120000143'
+  nome: XP CDI 94 Julho 2026 FII
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '11046179000134'
+  nome: XP Corporate Light FIRF CP LP
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '23999611000190'
+  nome: XP Corporate Plus FIC FIF Multi CP RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '04621721000170'
+  nome: XP Corporate Top CP FIF FIRF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Crédito Livre
+  grupo_looker: Renda Fixa Duração Baixa Crédito Livre
+- cnpj: '53779703000126'
+  nome: XP Credit Opportunities FIDC - Modelo A
+  categoria_cvm: Direito Creditório
+  gestora: XP Asset Management
+  classe_anbima: FIDC Outros
+  grupo_looker: FIDC Outros
+- cnpj: '22003930000131'
+  nome: XP Crédito Estruturado 120 FIC de FIF Multimercado CP RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '29813596000120'
+  nome: XP Crédito Estruturado 15 FIC de FIF RF CP LP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '27227796000176'
+  nome: XP Crédito Estruturado 360 FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '61802352000155'
+  nome: XP Crédito Estruturado 90 FIDC RL
+  categoria_cvm: Direito Creditório
+  gestora: XP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '26803233000116'
+  nome: XP Debêntures Incentivadas CDI CP FIF Incentivado de Investimento em Infra
+    RF RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '19657463000159'
+  nome: XP Debêntures Incentivadas IMAB CP Incentivado Infra RF RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '16575255000112'
+  nome: XP Dividendos FIA
+  categoria_cvm: Ações
+  gestora: XP Asset Management
+  classe_anbima: Ações Dividendos
+  grupo_looker: Ações Dividendos
+- cnpj: '45088790000147'
+  nome: XP Fundo Mútuo de Privatização Eletrobrás RL
+  categoria_cvm: Privatização
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações FMP - FGTS
+  grupo_looker: Ações FMP - FGTS
+- cnpj: '55994151000102'
+  nome: XP IMAB5 Debêntures Incentivadas RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Indexados
+  grupo_looker: Renda Fixa Indexados
+- cnpj: '14146491000198'
+  nome: XP Inflação Referenciado IPCA FIRF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Grau de Investimento
+  grupo_looker: Renda Fixa Duração Livre Grau de Investimento
+- cnpj: '34027608000121'
+  nome: XP Infra III FIP
+  categoria_cvm: Participações - Infraestrutura
+  gestora: XP Asset Management
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '44466492000180'
+  nome: XP Infra IV FIP IE - Classe A
+  categoria_cvm: Participações - Infraestrutura
+  gestora: XP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '26718169000175'
+  nome: XP Investor 30 FIC FIA RL
+  categoria_cvm: Ações
+  gestora: XP Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '43761934000159'
+  nome: XP Investor Equity Hedge FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '28122142000140'
+  nome: XP Investor Ibovespa Ativo FIC FIA RL
+  categoria_cvm: Ações
+  gestora: XP Asset Management
+  classe_anbima: Ações Índice Ativo
+  grupo_looker: Ações Índice Ativo
+- cnpj: '44642691000100'
+  nome: XP Investor Long Biased II FIC FIA RL
+  categoria_cvm: Ações
+  gestora: XP Asset Management
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '33755581000120'
+  nome: XP Investor Long Biased II FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '46965443000118'
+  nome: XP Investor Mútuo Privatização FGTS Carteira Livre RL
+  categoria_cvm: Privatização
+  gestora: XP Asset Management
+  classe_anbima: Ações FMP - FGTS
+  grupo_looker: Ações FMP - FGTS
+- cnpj: '41687480000198'
+  nome: XP JHSF Real Estate US FIP Multiestratégia IE
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '53095152000181'
+  nome: XP Juros Ativos CDI Debentures Incentivadas FI em Infra RF CP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '36352590000169'
+  nome: XP LB I Advisory FIC de FIF Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '51488342000133'
+  nome: XP Liquidez FIC RF REF DI CP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '36554324000119'
+  nome: XP Litigation Fund FIC FIM CP LP
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Estratégia Específica
+  grupo_looker: Multimercados Estratégia Específica
+- cnpj: '58863998000138'
+  nome: XP Logístico Prime Yield FII - I FII RL
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '25224843000100'
+  nome: XP Long Biased 30 FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '18993924000100'
+  nome: XP Long Biased FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Long and Short Direcional
+  grupo_looker: Multimercados Long and Short Direcional
+- cnpj: '23922063000109'
+  nome: XP Macro FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '26549933000126'
+  nome: XP Macro Institucional FIC FIM RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '34867766000190'
+  nome: XP Macro Juros Ativo FIC FIRF LP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Livre Crédito Livre
+  grupo_looker: Renda Fixa Duração Livre Crédito Livre
+- cnpj: '30068713000158'
+  nome: XP Macro Plus FIC FIM
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '46099591000105'
+  nome: XP Macro Plus Prev Master FI Financeiro Multimercado RL
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Macro
+  grupo_looker: Multimercados Macro
+- cnpj: '21523833000107'
+  nome: XP Private Equity I FIP Multi - Classe A
+  categoria_cvm: Participações
+  gestora: XP Asset Management
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '46153324000160'
+  nome: XP Private Equity II - Classe A - FIP Multiestratégia
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Asset Management
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '58561455000166'
+  nome: XP Private Equity Real Estate FII - Subclasse A
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '10843445000197'
+  nome: XP Referenciado FIF RF Referenciado DI CP RL
+  categoria_cvm: Renda Fixa
+  gestora: XP Asset Management
+  classe_anbima: Renda Fixa Duração Baixa Grau de Investimento
+  grupo_looker: Renda Fixa Duração Baixa Grau de Investimento
+- cnpj: '39669815000101'
+  nome: XP Selection Alternativo FIP Multi - Classe A
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Fundos de Participações
+  grupo_looker: Fundos de Participações
+- cnpj: '43120744000152'
+  nome: XP Special Opportunities FIP Multi - Classe A
+  categoria_cvm: Participações - Multiestratégia
+  gestora: XP Asset Management
+  classe_anbima: '-'
+  grupo_looker: '-'
+- cnpj: '34081651000175'
+  nome: XP Special Situations FIC FIM CP LP IE
+  categoria_cvm: Multimercado
+  gestora: XP Asset Management
+  classe_anbima: Multimercados Investimento no Exterior
+  grupo_looker: Multimercados Investimento no Exterior
+- cnpj: '42700507000106'
+  nome: XP SS 1 FIC FIDC RL-NP
+  categoria_cvm: Direito Creditório
+  gestora: XP Asset Management
+  classe_anbima: FIDC Agro Indústria e Comércio
+  grupo_looker: FIDC Agro Indústria e Comércio
+- cnpj: '41888464000163'
+  nome: XP Termo FIC FIRF LP
+  categoria_cvm: Renda Fixa
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Renda Fixa Duração Baixa Soberano
+  grupo_looker: Renda Fixa Duração Baixa Soberano
+- cnpj: '27546601000150'
+  nome: XPA Multimercado FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '34231958000105'
+  nome: XPA Portfolio Private FIC FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '28767181000103'
+  nome: XPA RV FIC FIA
+  categoria_cvm: Ações
+  gestora: XP Advisory
+  classe_anbima: Ações Livre
+  grupo_looker: Ações Livre
+- cnpj: '30887116000155'
+  nome: XPA Tático FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '42869954000185'
+  nome: XPA Trafalgar EVN FIM
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '30338831000139'
+  nome: XPA Vértice Crédito FIM CP
+  categoria_cvm: Multimercado
+  gestora: XP Advisory
+  classe_anbima: Multimercados Livre
+  grupo_looker: Multimercados Livre
+- cnpj: '43741189000186'
+  nome: XPAG11 - XP Crédito Agro
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: FII TVM Gestão Ativa
+  grupo_looker: FII TVM Gestão Ativa
+- cnpj: '42463823000101'
+  nome: XPEX11 - XP Exeter II Desenvolvimento Log. - Classe A
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: FII Desenvolvimento para Venda Gestão Ativa
+  grupo_looker: FII Desenvolvimento para Venda Gestão Ativa
+- cnpj: '50385179000110'
+  nome: XPHB11 - XP Habitat FII
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: FII Hibrido Gestão Ativa
+  grupo_looker: FII Hibrido Gestão Ativa
+- cnpj: '52357468000131'
+  nome: XPHF11 - XP Hedge Fund
+  categoria_cvm: Investimento Imobiliário
+  gestora: XP Asset Management
+  classe_anbima: FII TVM Gestão Ativa
+  grupo_looker: FII TVM Gestão Ativa
+- cnpj: '41360263000199'
+  nome: Zeno Global Dólar Advisory FIC de Ações RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+- cnpj: '56936565000130'
+  nome: Zeno Global Dólar Advisory II FIC Ações RL
+  categoria_cvm: Ações
+  gestora: XP Allocation Asset Management LTDA.
+  classe_anbima: Ações Investimento no Exterior
+  grupo_looker: Ações Investimento no Exterior
+categorias_looker:
+  Renda Fixa: RF
+  FII: Imobiliário
