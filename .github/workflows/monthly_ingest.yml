@@ -13,12 +13,6 @@ permissions:
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    env:
-      BIGQUERY_PROJECT: ${{ secrets.BIGQUERY_PROJECT }}
-      BIGQUERY_DATASET_STAGING: ${{ secrets.BIGQUERY_DATASET_STAGING }}
-      BIGQUERY_DATASET_CURATED: ${{ secrets.BIGQUERY_DATASET_CURATED }}
-      GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
-      GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/gcp-key.json
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,12 +27,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Restore BigQuery credentials
-        if: ${{ secrets.BIGQUERY_SERVICE_ACCOUNT != '' }}
-        run: |
-          echo "${{ secrets.BIGQUERY_SERVICE_ACCOUNT }}" > "$GOOGLE_APPLICATION_CREDENTIALS"
-
       - name: Run ingestion (download + CSV + JSON + site)
+        env:
+          BIGQUERY_PROJECT: 
+          BIGQUERY_DATASET_STAGING: 
+          BIGQUERY_DATASET_CURATED: 
+          GCS_BUCKET: 
         run: |
           python -m data_pipeline.run_pipeline ingest --skip-bigquery
 
@@ -53,21 +47,9 @@ jobs:
         with:
           path: output/site
 
-      - name: Upload to BigQuery
-        if: ${{ secrets.BIGQUERY_SERVICE_ACCOUNT != '' && env.BIGQUERY_PROJECT != '' && env.BIGQUERY_DATASET_STAGING != '' && env.BIGQUERY_DATASET_CURATED != '' }}
-        env:
-          BIGQUERY_PROJECT: ${{ secrets.BIGQUERY_PROJECT }}
-          BIGQUERY_DATASET_STAGING: ${{ secrets.BIGQUERY_DATASET_STAGING }}
-          BIGQUERY_DATASET_CURATED: ${{ secrets.BIGQUERY_DATASET_CURATED }}
-        run: |
-          python -m data_pipeline.run_pipeline upload-bigquery
-
   deploy:
     needs: ingest
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
