@@ -28,13 +28,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run ingestion (download + CSV + JSON + site)
-        env:
-          BIGQUERY_PROJECT: 
-          BIGQUERY_DATASET_STAGING: 
-          BIGQUERY_DATASET_CURATED: 
-          GCS_BUCKET: 
         run: |
-          python -m data_pipeline.run_pipeline ingest --skip-bigquery
+          python -m data_pipeline.run_pipeline ingest --skip-bigquery --config-path config/pipeline.local.yaml
 
       - name: Upload CSV artifacts
         uses: actions/upload-artifact@v4
@@ -50,6 +45,9 @@ jobs:
   deploy:
     needs: ingest
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
