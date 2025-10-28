@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 import shutil
 from datetime import datetime, timezone
@@ -13,11 +14,12 @@ import typer
 from dotenv import load_dotenv
 
 from .b3 import pipeline as b3_pipeline
-from .common import bigquery, config, io, logging_utils
+from .common import bigquery, config, io, logging_utils, normalization, sheets
 from .cvm.pipeline import CVMPipeline
 from .mais_retorno import fallback as mais_retorno_fallback
 
 APP = typer.Typer(help="Pipeline de ingestao de dados da CVM/B3 para BigQuery")
+LOGGER = logging.getLogger(__name__)
 
 
 def load_environment() -> None:
@@ -37,6 +39,35 @@ def get_config(config_path: Path | None = None) -> config.PipelineConfig:
         "BIGQUERY_DATASET_CURATED", cfg.bigquery_dataset_curated
     )
     cfg.gcs_bucket = os.getenv("GCS_BUCKET", cfg.gcs_bucket)
+
+    sheet_cnpjs = sheets.load_cnpjs_from_sheet()
+    if sheet_cnpjs:
+        normalized_sheet = {normalization.normalize_cnpj(cnpj) for cnpj in sheet_cnpjs}
+        filtered_fundos = [
+            fund
+            for fund in cfg.fundos
+            if normalization.normalize_cnpj(fund.cnpj) in normalized_sheet
+        ]
+        missing = sorted(
+            normalized_sheet
+            - {normalization.normalize_cnpj(fund.cnpj) for fund in cfg.fundos}
+        )
+        if missing:
+            LOGGER.warning(
+                "Os seguintes CNPJs estão na planilha, mas não no YAML: %s",
+                ", ".join(missing),
+            )
+        if not filtered_fundos:
+            raise RuntimeError(
+                "Nenhum fundo do config/pipeline.yaml corresponde aos CNPJs listados na planilha."
+            )
+        cfg.fundos = filtered_fundos
+        LOGGER.info("Lista de fundos filtrada para %s registros via Google Sheets.", len(cfg.fundos))
+    elif os.getenv("SHEETS_SPREADSHEET_ID"):
+        raise RuntimeError(
+            "A planilha informada não retornou CNPJs válidos. Verifique a coluna configurada."
+        )
+
     return cfg
 
 
@@ -157,6 +188,33 @@ def export_frontend_payload(
     diario = tables.get("fato_cota_diaria", pd.DataFrame()).copy()
     cotistas = tables.get("fato_cotistas_mensal", pd.DataFrame()).copy()
     carteira = tables.get("fato_carteira_mensal", pd.DataFrame()).copy()
+
+    # Ensure dataframes have the expected 'cnpj' column so downstream filtering
+    # doesn't raise KeyError when a table is empty or missing columns.
+    # This keeps behavior identical for non-empty tables but makes the export
+    # robust to missing tables coming from the CVM fallback logic.
+    if "cnpj" not in diario.columns:
+        diario = diario.copy()
+        diario["cnpj"] = pd.Series(dtype="object")
+    if "cnpj" not in cotistas.columns:
+        cotistas = cotistas.copy()
+        cotistas["cnpj"] = pd.Series(dtype="object")
+    if "cnpj" not in carteira.columns:
+        carteira = carteira.copy()
+        carteira["cnpj"] = pd.Series(dtype="object")
+
+    # Ensure datetime reference columns exist so downstream dropna/subset
+    # operations don't raise KeyError when a table is empty or missing
+    # expected columns. Use empty datetime Series for consistency.
+    if "data_cotacao" not in diario.columns:
+        diario = diario.copy()
+        diario["data_cotacao"] = pd.to_datetime(pd.Series(dtype="datetime64[ns]"))
+    if "data_referencia" not in cotistas.columns:
+        cotistas = cotistas.copy()
+        cotistas["data_referencia"] = pd.to_datetime(pd.Series(dtype="datetime64[ns]"))
+    if "data_referencia" not in carteira.columns:
+        carteira = carteira.copy()
+        carteira["data_referencia"] = pd.to_datetime(pd.Series(dtype="datetime64[ns]"))
 
     if not diario.empty:
         diario["data_cotacao"] = pd.to_datetime(diario["data_cotacao"], errors="coerce")

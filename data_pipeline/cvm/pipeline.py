@@ -61,11 +61,15 @@ class CVMPipeline:
         diario_urls = inf_diario.build_monthly_urls(months)
         mensal_urls = inf_mensal.build_monthly_urls(months)
 
+        monitored_cnpjs = {fund.cnpj for fund in self.config.fundos}
         LOGGER.info("Downloading CVM InfDiario datasets (%s months)", len(months))
-        diario_df = inf_diario.parse_inf_diario(diario_urls, workdir=self.workdir)
+        diario_df = inf_diario.parse_inf_diario(
+            diario_urls,
+            workdir=self.workdir,
+            cnpj_filter=monitored_cnpjs,
+        )
         LOGGER.info("Downloading CVM InfMensal datasets (%s months)", len(months))
         carteira_df, cotistas_df = inf_mensal.parse_inf_mensal(mensal_urls, workdir=self.workdir)
-        monitored_cnpjs = {fund.cnpj for fund in self.config.fundos}
         if carteira_df.empty and cotistas_df.empty:
             LOGGER.info("Falling back to CDA/Perfil Mensal datasets for carteiras e cotistas")
             fallback_skips = [3, 4, 5, 6]

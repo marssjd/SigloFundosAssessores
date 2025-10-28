@@ -27,9 +27,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Restore Google Sheets credentials
+        run: |
+          mkdir -p .secrets
+          echo "${{ secrets.GOOGLE_SHEETS_SERVICE_ACCOUNT }}" > .secrets/service-account.json
+
       - name: Run ingestion (download + CSV + JSON + site)
         run: |
           python -m data_pipeline.run_pipeline ingest --skip-bigquery --config-path config/pipeline.local.yaml
+        env:
+          SHEETS_SPREADSHEET_ID: ${{ vars.SHEETS_SPREADSHEET_ID }}
+          SHEETS_WORKSHEET_NAME: ${{ vars.SHEETS_WORKSHEET_NAME }}
+          SHEETS_WORKSHEET_GID: ${{ vars.SHEETS_WORKSHEET_GID }}
+          SHEETS_CNPJ_COLUMN: ${{ vars.SHEETS_CNPJ_COLUMN }}
+          SHEETS_CREDENTIALS_PATH: .secrets/service-account.json
 
       - name: Upload CSV artifacts
         uses: actions/upload-artifact@v4

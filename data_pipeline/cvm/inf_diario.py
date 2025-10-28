@@ -5,7 +5,7 @@ import logging
 import zipfile
 from datetime import date
 from pathlib import Path
-from typing import Iterable, List
+from typing import Iterable, List, Optional, Set
 
 import pandas as pd
 
@@ -39,20 +39,65 @@ COLUMN_MAPPING = {
 }
 
 DATE_COLUMNS = ["data_cotacao"]
+CHUNKSIZE = 200_000
 
 
-def load_csv_from_archive(path: Path) -> pd.DataFrame:
+def _filter_chunk_by_cnpj(chunk: pd.DataFrame, *, cnpj_filter: Set[str]) -> pd.DataFrame:
+    """Return only the rows whose CNPJ matches the monitored list."""
+    cnpj_column = next(
+        (col for col in ("CNPJ_FUNDO", "CNPJ_FUNDO_CLASSE") if col in chunk.columns),
+        None,
+    )
+    if cnpj_column is None:
+        return pd.DataFrame(columns=chunk.columns)
+
+    normalized = chunk[cnpj_column].map(
+        lambda value: normalization.normalize_cnpj(value) if isinstance(value, str) else value
+    )
+    mask = normalized.isin(cnpj_filter)
+    if not mask.any():
+        return pd.DataFrame(columns=chunk.columns)
+    return chunk.loc[mask].copy()
+
+
+def load_csv_from_archive(path: Path, *, cnpj_filter: Optional[Set[str]] = None) -> pd.DataFrame:
     # There is a single CSV inside each archive. We list files and pick the first.
     with zipfile.ZipFile(path) as zf:
         inner_files = [info for info in zf.infolist() if info.filename.endswith(".csv")]
         if not inner_files:
             raise ValueError(f"No CSV file found inside archive {path}")
         with zf.open(inner_files[0]) as fh:
-            df = pd.read_csv(fh, sep=";", decimal=",", dtype=str)
-    return df
+            if not cnpj_filter:
+                return pd.read_csv(fh, sep=";", decimal=",", dtype=str)
+
+            filtered_frames: List[pd.DataFrame] = []
+            first_columns: Optional[pd.Index] = None
+            for chunk in pd.read_csv(
+                fh,
+                sep=";",
+                decimal=",",
+                dtype=str,
+                chunksize=CHUNKSIZE,
+            ):
+                if first_columns is None:
+                    first_columns = chunk.columns
+                filtered = _filter_chunk_by_cnpj(chunk, cnpj_filter=cnpj_filter)
+                if not filtered.empty:
+                    filtered_frames.append(filtered)
+
+        if not filtered_frames:
+            if first_columns is None:
+                return pd.DataFrame()
+            return pd.DataFrame(columns=list(first_columns))
+        return pd.concat(filtered_frames, ignore_index=True)
 
 
-def parse_inf_diario(urls: Iterable[str], *, workdir: Path) -> pd.DataFrame:
+def parse_inf_diario(
+    urls: Iterable[str],
+    *,
+    workdir: Path,
+    cnpj_filter: Optional[Set[str]] = None,
+) -> pd.DataFrame:
     frames: List[pd.DataFrame] = []
     staging_dir = workdir / "cvm" / "inf_diario"
     staging_dir.mkdir(parents=True, exist_ok=True)
@@ -64,11 +109,12 @@ def parse_inf_diario(urls: Iterable[str], *, workdir: Path) -> pd.DataFrame:
             LOGGER.error("Could not download %s: %s", url, exc)
             continue
         try:
-            df = load_csv_from_archive(zip_path)
+            df = load_csv_from_archive(zip_path, cnpj_filter=cnpj_filter)
         except Exception as exc:  # pragma: no cover - network data dependent
             LOGGER.error("Failed to parse %s: %s", zip_path, exc)
             continue
-        frames.append(df)
+        if not df.empty:
+            frames.append(df)
 
     if not frames:
         raise RuntimeError("No InfDiario files were downloaded successfully")
