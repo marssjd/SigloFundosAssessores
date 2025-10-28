@@ -1,0 +1,46 @@
+name: Build and Deploy Site
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Restore service account (optional)
+        if: secrets.SERVICE_ACCOUNT_JSON != ''
+        run: |
+          echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" > $GITHUB_WORKSPACE/service-account.json
+          chmod 600 $GITHUB_WORKSPACE/service-account.json
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run pipeline (export-local)
+        env:
+          # Optional secrets (set these in the repository if you use Google Sheets)
+          SHEETS_CREDENTIALS_PATH: ${{ github.workspace }}/service-account.json
+          SHEETS_SPREADSHEET_ID: ${{ secrets.SHEETS_SPREADSHEET_ID }}
+          SHEETS_CNPJ_COLUMN: ${{ secrets.SHEETS_CNPJ_COLUMN }}
+        run: |
+          python -m data_pipeline.run_pipeline export-local --config-path config/pipeline.yaml
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output/site
+          publish_branch: gh-pages
