@@ -44,6 +44,11 @@ jobs:
         run: |
           python -m data_pipeline.run_pipeline export-local --config-path config/pipeline.yaml
 
+      - name: Ensure Pages site exists
+        uses: actions/configure-pages@v5
+        with:
+          enablement: 'true'
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
