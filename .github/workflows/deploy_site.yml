@@ -35,6 +35,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Debug: python and pip info
+        run: |
+          python --version || true
+          pip --version || true
+          pip freeze || true
+
       - name: Run pipeline (export-local)
         env:
           # Optional secrets (set these in the repository if you use Google Sheets)
@@ -43,6 +49,18 @@ jobs:
           SHEETS_CNPJ_COLUMN: ${{ secrets.SHEETS_CNPJ_COLUMN }}
         run: |
           python -m data_pipeline.run_pipeline export-local --config-path config/pipeline.yaml
+
+      - name: Debug: list output/site
+        run: |
+          echo "Listing output/site (if exists)"
+          ls -la output || true
+          ls -la output/site || true
+
+      - name: Upload site artifact for debugging
+        uses: actions/upload-artifact@v4
+        with:
+          name: output-site-debug
+          path: output/site
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
