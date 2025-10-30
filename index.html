@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Siglo Fundos Analytics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="vendor/chart.umd.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img
+          src="img/siglo-logo.png"
+          alt="Logo Siglo"
+          class="brand__logo"
+          width="72"
+          height="72"
+        />
+        <div>
+          <h1>Siglo Fundos Analytics</h1>
+          <p>
+            Monitoramento mensal de fundos brasileiros com dados da CVM e fontes complementares.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <aside id="fund-list">
+        <h2>Fundos monitorados</h2>
+        <div class="fund-controls">
+          <button id="refresh-from-sheet" type="button" class="btn small">Atualizar lista (verificar planilha)</button>
+          <div id="sheet-check-status" class="sheet-check-status" aria-live="polite"></div>
+        </div>
+        <div class="fund-search">
+          <label for="fund-search" class="fund-search__label">Buscar</label>
+          <input
+            type="search"
+            id="fund-search"
+            class="fund-search__input"
+            placeholder="Nome ou CNPJ"
+            autocomplete="off"
+          />
+        </div>
+        <div id="fund-buttons" class="fund-buttons"></div>
+      </aside>
+
+      <section class="content">
+        <article id="fund-header" class="fund-header">
+          <h2 id="fund-name">Selecione um fundo</h2>
+          <p id="fund-meta"></p>
+          <div id="fund-status" class="status-banner hidden"></div>
+        </article>
+
+        <section id="insights" class="insights">
+          <div class="card">
+            <h3>Data de referência</h3>
+            <p id="insights-date">-</p>
+          </div>
+          <div class="card">
+            <h3>Valor da cota</h3>
+            <p id="insights-valor-cota">-</p>
+          </div>
+          <div class="card">
+            <h3>Patrimônio líquido</h3>
+            <p id="insights-patrimonio">-</p>
+          </div>
+          <div class="card">
+            <h3>Número de cotistas</h3>
+            <p id="insights-cotistas">-</p>
+          </div>
+        </section>
+
+        <section class="chart-block">
+          <header>
+            <h3>Evolução da cota</h3>
+            <div class="chart-controls" data-filter="daily">
+              <label for="daily-start">
+                Início
+                <input type="date" id="daily-start" />
+              </label>
+              <label for="daily-end">
+                Fim
+                <input type="date" id="daily-end" />
+              </label>
+              <button type="button" class="reset-filter" data-filter="daily">
+                Período completo
+              </button>
+            </div>
+          </header>
+          <canvas id="valor-cota-chart" height="260"></canvas>
+        </section>
+
+        <section class="chart-block">
+          <header>
+            <h3>Cotistas e patrimônio mensal</h3>
+            <div class="chart-controls" data-filter="cotistas">
+              <label for="cotistas-start">
+                Início
+                <input type="date" id="cotistas-start" />
+              </label>
+              <label for="cotistas-end">
+                Fim
+                <input type="date" id="cotistas-end" />
+              </label>
+              <button type="button" class="reset-filter" data-filter="cotistas">
+                Período completo
+              </button>
+            </div>
+          </header>
+          <canvas id="cotistas-chart" height="260"></canvas>
+        </section>
+
+        <section class="chart-block">
+          <header>
+            <div>
+              <h3>Distribuição da carteira</h3>
+              <p class="chart-subtitle">
+                Histórico agrupado por classe de ativo (últimos 5 anos, ignorando os 3 meses
+                mais recentes).
+              </p>
+            </div>
+          </header>
+          <div class="holdings-section">
+            <div class="holdings-timeline">
+              <div class="holdings-timeline__header">
+                <h4>Histórico mensal por classe</h4>
+                <div class="chart-controls" data-filter="holdings">
+                  <label for="holdings-start">
+                    Início
+                    <input type="date" id="holdings-start" />
+                  </label>
+                  <label for="holdings-end">
+                    Fim
+                    <input type="date" id="holdings-end" />
+                  </label>
+                  <button type="button" class="reset-filter" data-filter="holdings">
+                    Período completo
+                  </button>
+                </div>
+              </div>
+              <canvas id="holdings-timeline-chart" height="280"></canvas>
+            </div>
+
+            <div class="holdings-snapshot">
+              <div class="holdings-snapshot__header">
+                <h4>Composição por ativo</h4>
+                <label for="holdings-date-select">
+                  Data
+                  <select id="holdings-date-select"></select>
+                </label>
+              </div>
+              <canvas id="holdings-chart" height="220"></canvas>
+              <table id="holdings-table">
+                <thead>
+                  <tr>
+                    <th>Emissor</th>
+                    <th>Tipo de ativo</th>
+                    <th>Valor (R$)</th>
+                    <th>Participação (%)</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <div class="holdings-assets">
+              <h4>Histórico de composição por ativo</h4>
+              <p class="chart-subtitle">
+                Principais posições ao longo do tempo (ativos individuais).
+              </p>
+              <canvas id="holdings-assets-chart" height="260"></canvas>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Fonte: CVM, B3 e processamentos internos. Atualizado automaticamente pelo pipeline
+        Siglo Fundos.
+      </p>
+    </footer>
+  </body>
+</html>
